@@ -23,7 +23,10 @@
             <div class="heading-text">
                 <span>GAMING HUB</span>
                 <span>CONNECTING</span>
-                <span class="games-text">GAMES</span>
+                <div class="autotype-container">
+                    <div class="autotype-bg"></div>
+                    <span class="autotype"></span>
+                </div>
                 <span>& <span class="gamers-highlight">/GAMERS/:</span></span>
             </div>
         </div>
@@ -31,5 +34,18 @@
 
         </div>
     </div>
+    
+    <!-- biblioteka do animacji napisu w headerze-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- setup animacji napisu w headerze -->
+    <script>
+        var typed = new Typed(".autotype", {
+          strings: ["GAMES", "CHALLENGES", "REWARDS"],
+          typeSpeed: 60,
+          backSpeed: 100,
+          loop: true
+        });
+    </script>
 </body>
 </html>

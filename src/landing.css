@@ -36,6 +36,7 @@ body {
 .header-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 7rem;
     margin-top: 5rem;
@@ -44,6 +45,11 @@ body {
 .header-wrapper, .left-header, .right-header{
     border: 1px solid white;
 
+}
+
+.right-header {
+    width: 800px;
+    height: 800px;
 }
 
 .left-header .heading-text {
@@ -58,14 +64,21 @@ body {
     font-weight: 500;
 }
 
-.left-header .heading-text .games-text {
-    width: fit-content;
+.autotype-bg {
+    position: absolute;
+    transform: translateX(-5px);
+    transform: translateY(11px);
     background-color: #8400FF;
     box-shadow: 0px 0px 100px 10px #8400FF;
+    width: 45rem;
+    height: 8rem;
+}
+
+.left-header .heading-text .autotype {
+    position: relative;
     line-height: 7rem;
     padding: 0px 10px;
     padding-top: 5px;
-    display: inline-block;
 }
 
 .left-header .heading-text span .gamers-highlight {
