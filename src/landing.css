@@ -32,3 +32,44 @@ body {
     color: white;
     padding: 0 1.5rem;
 }
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 7rem;
+    margin-top: 5rem;
+}
+
+.header-wrapper, .left-header, .right-header{
+    border: 1px solid white;
+
+}
+
+.left-header .heading-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9rem;
+}
+
+.left-header .heading-text span {
+    color: white;
+    font-size: 8rem;
+    font-weight: 500;
+}
+
+.left-header .heading-text .games-text {
+    width: fit-content;
+    background-color: #8400FF;
+    box-shadow: 0px 0px 100px 10px #8400FF;
+    line-height: 7rem;
+    padding: 0px 10px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.left-header .heading-text span .gamers-highlight {
+    color: #05F4F9;
+    font-weight: 600;
+}
+
