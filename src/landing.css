@@ -1,8 +1,8 @@
 body {
     background-color: black;
     font-family: "Rajdhani", sans-serif;
-    width: 100%;
     box-sizing: border-box;
+    margin: 0;
 }
 
 /* Style navbar */
@@ -278,4 +278,16 @@ input[type="checkbox"] {
 
   .video-frame {
     width: 100%;
+  }
+
+  /* style do graffiti */
+  .beGOAT-graffiti-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+  }
+
+  .beGOAT-graffiti {
+    transform: translateX(6%);
   }
