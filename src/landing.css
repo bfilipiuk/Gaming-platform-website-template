@@ -1,8 +1,11 @@
 body {
     background-color: black;
     font-family: "Rajdhani", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Style navbar */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -33,6 +36,27 @@ body {
     padding: 0 1.5rem;
 }
 
+.tgl-btn {
+    display: none;
+    margin-right: 2.5rem;
+}
+
+.tgl-btn .tgl-icon {
+    width: 2.5rem;
+    height: auto;
+}
+
+@media(max-width: 901px) {
+    .navbar  ul {
+        display: none;
+    }
+
+    .tgl-btn {
+        display: block;
+    }
+}
+
+/* Style header */
 .header-wrapper {
     display: flex;
     flex-direction: row;
@@ -40,6 +64,7 @@ body {
     justify-content: space-between;
     margin: 0 7rem;
     margin-top: 5rem;
+    max-width: 100%;
 }
 
 .header-wrapper, .left-header, .right-header{
@@ -50,6 +75,11 @@ body {
 .right-header {
     width: 800px;
     height: 800px;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
 }
 
 .left-header .heading-text {
