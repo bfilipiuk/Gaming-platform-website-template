@@ -68,18 +68,22 @@ body {
 }
 
 .header-wrapper, .left-header, .right-header{
-    border: 1px solid white;
+    /* border: 1px solid white; */
 
 }
 
 .right-header {
     width: 800px;
     height: 800px;
+    /* border: 1px solid white; */
+    width: 49%;
 }
 
 .left-header {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid white; */
+    width: 49%;
 }
 
 .left-header .heading-text {
@@ -116,3 +120,47 @@ body {
     font-weight: 600;
 }
 
+/* Style terminal cta */
+.cta-terminal-wrapper {
+    border: 1px solid white;
+    margin-top: 8rem;
+    width: 800px;
+    font-family: 'Consolas';
+    /* display: inline-block; */
+}
+
+.terminal-navbar {
+    display: flex;
+    justify-content: end;
+    background-color: #505050;
+    position: relative;
+}
+
+.terminal-navbar .buttons {
+    padding: 15px 10px;
+}
+
+.terminal-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 8px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+}
+
+.terminal-card .icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.terminal-content {
+    height: 400px;
+    background-color: #0C0C0C;
+}
