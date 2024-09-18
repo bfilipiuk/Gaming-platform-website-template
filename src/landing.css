@@ -161,6 +161,99 @@ body {
 }
 
 .terminal-content {
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding: 20px 35px;
+    padding-bottom: 35px;
     background-color: #0C0C0C;
 }
+
+.terminal-content .begoat-terminal-text {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.agreement-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* !style do checkboxa! */
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.checkboxOverride {
+    position: relative;
+    width: 16px;
+}
+
+.checkboxOverride input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.checkboxOverride label {
+    background: none repeat scroll 0 0 #000000;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+  
+.checkboxOverride label:after {
+    color: #05F4F9;
+    border-style: none none solid solid;
+    content: "";
+    height: 30%;
+    width: 60%;
+    left: 15%;
+    top: 20%;
+    opacity: 0;
+    position: absolute;
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+    transform:rotate(-45deg);
+  }
+  /* !koniec style do checkboxa! */
+
+  .terminal-content .input {
+    width: 40%;
+    color: #05F4F9;
+    background-color: black;
+    outline: none;
+    border: 2px solid white;
+    padding: 8px;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+  }
+
+  .terminal-content .input::placeholder {
+    color: #05F4F9;
+  }
+
+  .terminal-content .input:focus {
+    border: 2px solid #05F4F9;
+  }
+
+  .terminal-content .button {
+    width: 40%;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 4px solid #05F4F9;
+    border-style: none none solid none;
+    padding: 8px;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
