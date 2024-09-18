@@ -257,3 +257,13 @@ input[type="checkbox"] {
     font-weight: 600;
     cursor: pointer;
   }
+
+  /* style do animacja logo */
+  .logo-animation-container {
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin-top: 8rem;
+  }
