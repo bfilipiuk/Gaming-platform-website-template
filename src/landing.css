@@ -267,3 +267,15 @@ input[type="checkbox"] {
     width: 800px;
     margin-top: 8rem;
   }
+
+  /* style do video */
+  .video-container {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+    width: 100%;
+  }
+
+  .video-frame {
+    width: 100%;
+  }
