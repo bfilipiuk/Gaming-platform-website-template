@@ -205,10 +205,10 @@ input[type="checkbox"] {
     -ms-transform:rotate(-45deg); /* IE 9 */
     -webkit-transform:rotate(-45deg); /* Safari and Chrome */
     transform:rotate(-45deg);
-  }
-  /* !koniec style do checkboxa! */
+}
+/* !koniec style do checkboxa! */
 
-  .terminal-content .input {
+.terminal-content .input {
     width: 40%;
     color: #05F4F9;
     background-color: black;
@@ -219,17 +219,17 @@ input[type="checkbox"] {
     font-size: 20px;
     font-weight: 500;
     box-sizing: border-box;
-  }
+}
 
-  .terminal-content .input::placeholder {
+.terminal-content .input::placeholder {
     color: #05F4F9;
-  }
+}
 
-  .terminal-content .input:focus {
+.terminal-content .input:focus {
     border: 2px solid #05F4F9;
-  }
+}
 
-  .terminal-content .button {
+.terminal-content .button {
     width: 40%;
     color: #000000;
     background-color: rgb(255, 255, 255);
@@ -241,81 +241,153 @@ input[type="checkbox"] {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-  }
+}
 
-  /* style do animacja logo */
-  .logo-animation-container {
+/* style do animacja logo */
+.logo-animation-container {
     /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 800px;
     margin-top: 8rem;
-  }
+}
 
-  /* style do video */
-  .video-container {
+/* style do video */
+.video-container {
     display: flex;
     align-items: center;
     margin-top: 8rem;
     width: 100%;
-  }
+}
 
-  .video-frame {
+.video-frame {
     width: 100%;
-  }
+}
 
-  /* style do graffiti */
-  .beGOAT-graffiti-container {
+/* style do graffiti */
+.beGOAT-graffiti-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 8rem;
-  }
+}
 
-  .beGOAT-graffiti {
+.beGOAT-graffiti {
     transform: translateX(6%);
-  }
+}
 
-  /* style do about */
-  .about-container {
+/* style do about */
+.about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
     color: white;
     margin-top: 8rem;
-  }
+}
 
-  .logo-text {
+.logo-text {
     position: relative;
-  }
+}
 
-  .about-title {
+.about-title {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4rem;
     font-weight: 500;
-  }
+}
 
-  .about-text {
+.about-text {
     width: 80%;
     font-size: 3rem;
     font-weight: 500;
     text-align: center;
-  }
+}
 
-  .about-text .be, .about-text .zmieniamy-zasady-gry {
+.about-text .be, .about-text .zmieniamy-zasady-gry {
     color: #05F4F9;
-  }
+}
 
-  .about-text .goat, .about-text .bez-kompromisow {
+.about-text .goat, .about-text .bez-kompromisow {
     color: #8400FF;
-  }
+}
 
-  @media(max-width: 1001px) {
+/* Style do sekcji */
+.fav-games-section {
+    position: relative;
+    width: 100%;
+    height: 790px;
+    display: flex;
+    flex-direction: row;
+    padding: 7rem;
+    margin-top: 10rem;
+}
+
+.fav-games-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(45deg, #05F4F9 20%, #8400FF 110%);
+    z-index: 0;
+}
+
+.fav-games-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background-image: url('/public/textures/scratches-texture.png');
+    background-size: cover;
+    mix-blend-mode: lighten;
+    filter: contrast(150%);
+    z-index: 1;
+}
+
+.games-text-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 60%;
+}
+
+.games-header {
+    color: white;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.games-header .ulubione-gry {
+    background-color: #8400FF;
+    padding: 0px 20px;
+    margin: -5px;
+}
+
+.games-text {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.fav-games-image {
+    position: absolute;
+    bottom: 15px; /* dostosuj, aby kontrolować, ile obrazek wystaje */
+    right: 0px;
+    width: auto;
+    height: auto;
+    z-index: 3; /* upewnij się, że obrazek jest na wierzchu */
+}
+
+
+/*! Media queries !*/
+@media(max-width: 1001px) {
     .navbar  ul, .terminal1, .logo-animation-container, .logo-animation{
         display: none;
     }
