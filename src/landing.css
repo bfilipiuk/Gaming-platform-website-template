@@ -46,16 +46,6 @@ body {
     height: auto;
 }
 
-@media(max-width: 901px) {
-    .navbar  ul {
-        display: none;
-    }
-
-    .tgl-btn {
-        display: block;
-    }
-}
-
 /* Style header */
 .header-wrapper {
     display: flex;
@@ -65,11 +55,6 @@ body {
     margin: 0 7rem;
     margin-top: 5rem;
     max-width: 100%;
-}
-
-.header-wrapper, .left-header, .right-header{
-    /* border: 1px solid white; */
-
 }
 
 .right-header {
@@ -100,8 +85,8 @@ body {
 
 .autotype-bg {
     position: absolute;
-    transform: translateX(-5px);
-    transform: translateY(11px);
+    transform: translateX(-10px);
+    transform: translateY(20px);
     background-color: #8400FF;
     box-shadow: 0px 0px 100px 10px #8400FF;
     width: 45rem;
@@ -118,6 +103,58 @@ body {
 .left-header .heading-text span .gamers-highlight {
     color: #05F4F9;
     font-weight: 600;
+}
+
+@media(max-width: 1001px) {
+    .navbar  ul, .terminal1, .logo-animation-container, .logo-animation{
+        display: none;
+    }
+
+    .tgl-btn {
+        display: block;
+    }
+
+    .navbar {
+        /* margin-top: 1vw; */
+        margin-top: min(30px, 4vw);
+    }
+
+    .navbar .logo {
+        margin-left: 10vw;
+        height: 7vw;
+        max-height: 50px;
+    }
+
+    .navbar .tgl-btn {
+        margin-right: 5vw;
+        width: 7vw;
+    }
+
+    .navbar .tgl-btn .tgl-icon {
+        margin-right: 5vw;
+        width: 6vw;
+    }
+
+    .header-wrapper {
+        margin: 0 10vw;
+    }
+
+    .left-header {
+        width: 100%;
+    }
+
+    .left-header .heading-text span {
+        font-size: 10vw;
+    }
+
+    .autotype-container {
+        height: 15vw;
+    }
+
+    .autotype-container .autotype-bg {
+        height: 11vw;
+        width: 61vw;
+    }
 }
 
 /* Style terminal cta */
