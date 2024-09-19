@@ -3,6 +3,11 @@ body {
     font-family: "Rajdhani", sans-serif;
     box-sizing: border-box;
     margin: 0;
+    
+}
+
+html {
+    overflow-x: hidden;
 }
 
 /* Style navbar */
@@ -323,6 +328,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: row;
     margin-top: 10rem;
+    /* overflow-x: hidden; */
 }
 
 .fav-games-section::before {
@@ -365,7 +371,8 @@ input[type="checkbox"] {
 
 .games-header {
     color: white;
-    font-size: 80px;
+    /* font-size: 80px; */
+    font-size: 3.5vw;
     font-weight: 600;
 }
 
@@ -377,17 +384,18 @@ input[type="checkbox"] {
 
 .games-text {
     font-size: 48px;
+    font-size: 2.2vw;
     font-weight: 500;
     color: #000000;
 }
 
 .fav-games-image {
     position: absolute;
-    bottom: 0px; /* dostosuj, aby kontrolować, ile obrazek wystaje */
-    right: 0px;
-    width: auto;
+    bottom: 0;
+    right: 0;
+    width: 45vw;
     height: auto;
-    z-index: 3; /* upewnij się, że obrazek jest na wierzchu */
+    z-index: 3;
 }
 
 
@@ -482,5 +490,14 @@ input[type="checkbox"] {
         font-size: 4vw;
         width: 60%;
         margin-left: 2vw;
+    }
+
+    .fav-games-section {
+        overflow-x: hidden;
+    }
+
+    .fav-games-image {
+        width: 90vw;
+        right: -45vw;
     }
 }
