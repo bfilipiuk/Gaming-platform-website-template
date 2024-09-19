@@ -365,4 +365,21 @@ input[type="checkbox"] {
         height: 11vw;
         width: 61vw;
     }
+
+    .about-container {
+        gap: 8vw;
+    }
+
+    .logo-text .logo-sygnet {
+        width: 17vw;
+        height: auto;
+    }
+
+    .logo-text .about-title {
+        font-size: 7vw;
+    }
+
+    .about-text {
+        font-size: 4vw;
+    }
 }
