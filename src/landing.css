@@ -275,10 +275,13 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     margin-top: 8rem;
+    overflow-x: hidden;
 }
 
 .beGOAT-graffiti {
     transform: translateX(6%);
+    width: 120vw;
+    height: auto;
 }
 
 /* style do about */
