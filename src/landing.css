@@ -116,7 +116,6 @@ html {
     margin-top: 8rem;
     width: 800px;
     font-family: 'Consolas';
-    /* display: inline-block; */
 }
 
 .terminal-navbar {
@@ -799,6 +798,84 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* Style do big cta terminal */
+.big-cta-terminal {
+    border: 1px solid white;
+    font-family: 'Consolas';
+    overflow-x: hidden;
+}
+
+.big-cta-terminal .terminal-navbar {
+    display: flex;
+    justify-content: end;
+    background-color: #505050;
+    position: relative;
+}
+
+.big-cta-terminal .terminal-navbar .buttons {
+    padding: 10px 10px;
+}
+
+.big-cta-terminal .terminal-navbar .terminal-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 4px 8px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+}
+
+.big-cta-terminal .terminal-navbar .terminal-card .icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.big-cta-terminal .terminal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* padding: 4rem; */
+    padding-left: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.big-cta-terminal .terminal-content .logo-container{
+    /* width: 200px; */
+    margin-right: 8rem;
+    padding: 50px;
+}
+
+.big-cta-terminal .terminal-content .logo-container img{
+    width: 30rem;
+    height: auto;
+}
+
+.info-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.info-form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-form-container .form input,  .info-form-container .form button{
+    width: 18rem;
+}
+
 @media(max-width: 1850px) {
     .rewards-image {
         right: 5vw;
@@ -978,6 +1055,24 @@ input[type="checkbox"] {
     .contact .contact-btn {
         max-width: 280px;
     }
+
+    .info-form-container .info, .terminal-content .logo-container {
+        display: none;
+    }
+
+    .info-form-container .form {
+        width: 87vw;
+        margin-top: 0;
+    }
+
+    .big-cta-terminal .terminal-content {
+        padding: 6vw;
+    }
+
+    .info-form-container .form input,  .info-form-container .form button{
+        width: 100%;
+    }
+    
 }
 
 @media(max-width: 500px) {
