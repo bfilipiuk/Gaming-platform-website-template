@@ -936,8 +936,17 @@ input[type="checkbox"] {
         width: 61vw;
     }
 
+    .video-container {
+        margin-top: 15vw;
+    }
+
+    .beGOAT-graffiti-container {
+        margin-top: 15vw;
+    }
+
     .about-container {
         gap: 8vw;
+        margin-top: 15vw;
     }
 
     .logo-text .logo-sygnet {
@@ -1003,6 +1012,7 @@ input[type="checkbox"] {
     }
 
     .fav-games-section {
+        margin-top: 15vw;
         overflow-x: hidden;
     }
 
