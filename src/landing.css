@@ -636,6 +636,96 @@ input[type="checkbox"] {
     z-index: 3;
 }
 
+/* Style do sekcji account*/
+.account-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.account-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    /* background-image: linear-gradient(45deg, #05F4F9 20%, #8400FF 110%); */
+    z-index: 0;
+}
+
+.account-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    opacity: 0.7;
+    background-size: cover;
+    mix-blend-mode: hard-light;
+    filter: contrast(200%);
+    z-index: 1;
+}
+
+.account-text-container {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 45%;
+}
+
+.account-header {
+    color: white;
+    /* font-size: 80px; */
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+
+.account-header .jedno-konto {
+    background-color: #8400FF;
+    padding: 0px 20px;
+    margin: -5px;
+}
+
+.account-text {
+    font-size: 48px;
+    font-size: 2.2vw;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.account-text .be, .account-text .goat {
+    font-weight: 600;
+}
+
+.account-text .be {
+    color: #05F4F9;
+}
+
+.account-text .goat {
+    color: #8400FF;
+}
+
+.account-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40vw;
+    max-width: 800px;
+    height: auto;
+    z-index: 3;
+}
+
 @media(max-width: 1850px) {
     .rewards-image {
         right: 5vw;
@@ -710,6 +800,10 @@ input[type="checkbox"] {
         font-size: 4vw;
     }
 
+    .account-section {
+        overflow-x: hidden;
+    }
+
     .games-text-container, .rewards-text-container {
         margin-top: 8vw;
         margin-left: 8vw;
@@ -719,11 +813,22 @@ input[type="checkbox"] {
         width: 80%;
     }
 
-    .games-header, .challanges-header, .rewards-header, .tournaments-header {
+    .account-text-container {
+        margin-top: 8vw;
+        margin-left: 8vw;
+        margin-bottom: 8vw;
+        margin-right: 8vw;
+        gap: 2vw;
+        width: 50%;
+    }
+
+    .games-header, .challanges-header, .rewards-header, .tournaments-header, .account-header {
         font-size: 7vw;
     }
 
-    .games-header .ulubione-gry, .challanges-header .header-highlight, .rewards-header .wyplacaj, .tournaments-header .header-highlight {
+    .games-header .ulubione-gry, .challanges-header .header-highlight, .rewards-header .wyplacaj, .tournaments-header .header-highlight,
+    .account-header .jedno-konto 
+    {
         font-size: 7vw;
         padding: 0vw 0.5vw;
     }
@@ -731,6 +836,11 @@ input[type="checkbox"] {
     .games-text, .rewards-text {
         font-size: 4vw;
         width: 60%;
+    }
+
+    .account-text {
+        font-size: 4vw;
+        width: 90%;
     }
 
     .challanges-text, .tournaments-text  {
@@ -777,5 +887,10 @@ input[type="checkbox"] {
     .tournaments-image {
         width: 40vw;
         left: -10vw;
+    }
+
+    .account-image {
+        width: 88vw;
+        right: -40vw;
     }
 }
