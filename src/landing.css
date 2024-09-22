@@ -326,7 +326,7 @@ input[type="checkbox"] {
 .gaming-essence-container {
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 35rem;
     position: relative;
 }
 
@@ -334,6 +334,13 @@ input[type="checkbox"] {
     width: 86vw;
     z-index: 1;
     /* margin: 0 7rem; */
+}
+
+.terminal2 {
+    position: absolute;
+    top: -30.5vw;
+    top: -37rem;
+    z-index: 2;
 }
 
 .gaming-essence-container .mobile {
@@ -1069,6 +1076,10 @@ input[type="checkbox"] {
     .gaming-essence-container .sofa-characters {
         width: 79vw;
         left: 11.5vw;
+    }
+
+    .terminal2 {
+        display: none;
     }
 
     .account-section {
