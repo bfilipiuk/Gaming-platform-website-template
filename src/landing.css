@@ -322,6 +322,82 @@ input[type="checkbox"] {
     color: #8400FF;
 }
 
+/* Style do esencji gamingu */
+.gaming-essence-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.gaming-essence-container .purple-frame {
+    width: 86vw;
+    z-index: 1;
+    /* margin: 0 7rem; */
+}
+
+.gaming-essence-container .mobile {
+    display: none;
+}
+
+.gaming-essence-container .essence-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: white;
+    margin-top: 3vw;
+    z-index: 2;
+}
+
+.gaming-essence-container .title {
+    font-size: 4.15vw;
+    font-weight: 500;
+}
+
+.gaming-essence-container .essence-text-container .esencja-gamingu {
+    background-color: #8400FF;
+}
+
+.gaming-essence-container .essence-text-container .nowej-odslonie {
+    color: #05F4F9;
+    font-weight: 600;
+}
+
+.essence-text-container .text-columns-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.essence-text-container .text-columns-container .column {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 24vw;
+}
+
+.essence-text-container .text-columns-container .column .header {
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #05F4F9;
+}
+
+.essence-text-container .text-columns-container .column .text {
+    font-size: 2.07vw;
+    font-weight: 400;
+}
+
+.gaming-essence-container .sofa-characters {
+    position: absolute;
+    width: 85vw;
+    bottom: -3.3vw;
+    left: 9vw;
+    z-index: 2;
+}
+
 /* Style do sekcji fav games*/
 .fav-games-section {
     position: relative;
@@ -960,6 +1036,39 @@ input[type="checkbox"] {
 
     .about-text {
         font-size: 4vw;
+    }
+
+    .gaming-essence-container .desktop {
+        display: none;
+    }
+
+    .gaming-essence-container .mobile {
+        display: block;
+    }
+
+    .gaming-essence-container .essence-text-container .text-columns-container {
+        flex-direction: column;
+    }
+
+    .essence-text-container .text-columns-container .column {
+        width: 76vw;
+    }
+
+    .gaming-essence-container .essence-text-container .title {
+        font-size: 4.5vw
+    }
+
+    .essence-text-container .text-columns-container .column .header {
+        font-size: 4.4vw;
+    }
+
+    .essence-text-container .text-columns-container .column .text {
+        font-size: 4.4vw;
+    }
+
+    .gaming-essence-container .sofa-characters {
+        width: 79vw;
+        left: 11.5vw;
     }
 
     .account-section {
