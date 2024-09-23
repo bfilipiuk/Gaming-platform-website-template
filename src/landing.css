@@ -57,9 +57,6 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* margin: 0 7rem; */
-    /* padding: 0 7rem; */
-    /* margin-top: 5rem; */
     max-width: 100%;
     padding-bottom: 35rem;
 
@@ -87,7 +84,7 @@ html {
 .left-header .heading-text {
     display: flex;
     flex-direction: column;
-    padding-top: 9rem;
+    padding-top: 19rem;
 }
 
 .left-header .heading-text span {
@@ -1039,11 +1036,16 @@ input[type="checkbox"] {
     }
 
     .header-wrapper {
-        margin: 0 10vw;
+        /* margin: 0 10vw; */
+    }
+
+    .left-header .heading-text {
+        padding-top: 15vw;
     }
 
     .left-header {
         width: 100%;
+        margin: 0 10vw;
     }
 
     .left-header .heading-text span {
@@ -1061,6 +1063,8 @@ input[type="checkbox"] {
 
     .video-container {
         margin-top: 15vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
     }
 
     .beGOAT-graffiti-container {
