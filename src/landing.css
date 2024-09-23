@@ -449,12 +449,14 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     margin-top: 8rem;
-    width: 100%;
+    width: auto;
+    margin-left: 7rem;
+    margin-right: 7rem;
 }
 
 .video-frame {
     width: 100%;
-    margin: 0 7rem;
+    /* margin: 0 7rem; */
 }
 
 /* style do graffiti */
@@ -488,6 +490,7 @@ input[type="checkbox"] {
     /* transform: translateX(5%); */
     z-index: 2;
     width: 110vw;
+    max-width: 2200px;
     height: auto;
     position: relative;
 }
@@ -497,6 +500,9 @@ input[type="checkbox"] {
     position: relative;
     /* overflow-x: hidden; */
     padding-top: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-gaming-wrapper::before {
@@ -522,6 +528,8 @@ input[type="checkbox"] {
     gap: 4rem;
     color: white;
     margin-top: 8rem;
+    width: 100%;
+    max-width: 1900px;
     z-index: 1;
 }
 
@@ -563,10 +571,16 @@ input[type="checkbox"] {
     margin-top: 35rem;
     position: relative;
     padding-bottom: 7rem;
+    width: 100%;
+    max-width: 2100px;
+    /* margin: 7rem 0; */
 }
 
 .gaming-essence-container .purple-frame {
     width: 86vw;
+    max-width: 2100px;
+    margin-left: 7rem;
+    margin-right: 7rem;
     z-index: 1;
     /* margin: 0 7rem; */
 }
@@ -635,9 +649,40 @@ input[type="checkbox"] {
 .gaming-essence-container .sofa-characters {
     position: absolute;
     width: 85vw;
+    max-width: 1900px;
     bottom: 2.6vw;
     left: 9vw;
     z-index: 2;
+}
+
+@media(min-width: 2450px) {
+    .gaming-essence-container .title {
+        font-size: 95px;
+    }
+
+    .essence-text-container .text-columns-container {
+        gap: 25px;
+        margin-top: 65px;
+    }
+
+    .essence-text-container .text-columns-container .column .header {
+        font-size: 55px;
+    }
+    
+    .essence-text-container .text-columns-container .column .text {
+        font-size: 45px;
+    }
+
+    .essence-text-container .text-columns-container .column {
+        gap: 20px;
+        width: 540px;
+    }
+
+    .gaming-essence-container .sofa-characters {
+        bottom: 0px;
+        left: 3%;
+        z-index: 2;
+    }
 }
 
 /* Style do sekcji fav games*/
@@ -646,7 +691,8 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    /* flex-direction: row; */
     /* margin-top: 10rem; */
     /* overflow-x: hidden; */
 }
@@ -677,6 +723,12 @@ input[type="checkbox"] {
     mix-blend-mode: lighten;
     filter: contrast(500%);
     z-index: 1;
+}
+
+.fav-games-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
 }
 
 .games-text-container {
@@ -715,8 +767,21 @@ input[type="checkbox"] {
     bottom: 0;
     right: 0;
     width: 45vw;
+    max-width: 945px;
     height: auto;
     z-index: 3;
+}
+
+@media(min-width: 2101px) {
+    .games-header {
+        font-size: 74px;
+    }
+        
+    .games-text {
+        font-size: 48px;
+    }
+    
+    
 }
 
 /* Style do sekcji challanges */
@@ -1307,6 +1372,7 @@ input[type="checkbox"] {
 
     .gaming-essence-container .mobile {
         display: block;
+        margin: 0 8vw;
     }
 
     .gaming-essence-container .essence-text-container .text-columns-container {
