@@ -60,6 +60,7 @@ html {
     margin: 0 7rem;
     margin-top: 5rem;
     max-width: 100%;
+    padding-bottom: 35rem;
 }
 
 .right-header {
@@ -278,14 +279,20 @@ input[type="checkbox"] {
 }
 
 .beGOAT-graffiti {
-    transform: translateX(6%);
+    transform: translateX(-3%) translateY(-85%);
+    /* transform: translateY(-100%); */
+    /* top: -20vw; */
+    z-index: 1;
     width: 120vw;
     height: auto;
+    position: absolute;
 }
 
 /* tło do about i esencji */
 .about-gaming-wrapper {
     position: relative;
+    /* overflow-x: hidden; */
+    padding-top: 20rem;
 }
 
 .about-gaming-wrapper::before {
