@@ -725,7 +725,7 @@ input[type="checkbox"] {
     z-index: 1;
 }
 
-.fav-games-main {
+.fav-games-main, .challanges-main {
     z-index: 2;
     max-width: 2100px;
     position: relative;
@@ -773,6 +773,34 @@ input[type="checkbox"] {
 }
 
 @media(min-width: 2101px) {
+    .gaming-essence-container .title {
+        font-size: 74px;
+    }
+
+    .essence-text-container .text-columns-container {
+        gap: 25px;
+        margin-top: 65px;
+    }
+
+    .essence-text-container .text-columns-container .column .header {
+        font-size: 48px;
+    }
+    
+    .essence-text-container .text-columns-container .column .text {
+        font-size: 45px;
+    }
+
+    .essence-text-container .text-columns-container .column {
+        gap: 20px;
+        width: 540px;
+    }
+
+    .gaming-essence-container .sofa-characters {
+        bottom: 50px;
+        left: 7%;
+        z-index: 2;
+    }
+
     .games-header {
         font-size: 74px;
     }
@@ -780,8 +808,47 @@ input[type="checkbox"] {
     .games-text {
         font-size: 48px;
     }
-    
-    
+
+    .challanges-text-container .challanges-header {
+        font-size: 74px;
+    }
+        
+    .challanges-text-container .challanges-text {
+        font-size: 48px;
+    }
+
+    .challanges-image {
+        width: 750px;
+        max-width: 750px;
+    }
+
+    .rewards-text-container .rewards-header {
+        font-size: 74px;
+    }
+
+    .rewards-text-container .rewards-text {
+        font-size: 48px
+    }
+
+    .rewards-section .rewards-image {
+        width: 800px;
+    }
+
+    .tournaments-text-container .tournaments-header {
+        font-size: 74px;
+    }
+
+    .tournaments-text-container .tournaments-text {
+        font-size: 48px
+    }
+
+    .account-text-container .account-header {
+        font-size: 74px;
+    }
+
+    .account-text-container .account-text {
+        font-size: 48px;
+    }
 }
 
 /* Style do sekcji challanges */
@@ -790,8 +857,14 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     /* overflow-x: hidden; */
+}
+
+.challanges-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
 }
 
 .challanges-section::before {
@@ -857,7 +930,8 @@ input[type="checkbox"] {
     position: absolute;
     bottom: 0;
     left: 7rem;
-    width: 30vw;
+    width: 32vw;
+    max-width: 750px;
     /* width: 40rem; */
     height: auto;
     z-index: 3;
@@ -869,8 +943,14 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     overflow-x: hidden;
+}
+
+.rewards-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
 }
 
 .rewards-section::before {
@@ -947,9 +1027,15 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    /* overflow-x: hidden; */
+    justify-content: center;
 }
+
+.tournaments-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
 
 .tournaments-section::before {
     content: "";
@@ -1027,8 +1113,15 @@ input[type="checkbox"] {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
+
+.account-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
 
 .account-section::before {
     content: "";
