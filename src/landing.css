@@ -57,10 +57,16 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 7rem;
-    margin-top: 5rem;
+    /* margin: 0 7rem; */
+    /* padding: 0 7rem; */
+    /* margin-top: 5rem; */
     max-width: 100%;
     padding-bottom: 35rem;
+
+    background:
+        url('/public/backgrounds/dots-bg-top.svg') no-repeat top center,
+        url('/public/backgrounds/dots-bg.svg') center top;
+    background-size: 100% auto, 100% auto;
 }
 
 .right-header {
@@ -75,6 +81,7 @@ html {
     flex-direction: column;
     /* border: 1px solid white; */
     width: 49%;
+    margin-left: 7rem;
 }
 
 .left-header .heading-text {
@@ -262,6 +269,8 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     margin-top: 8rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
     width: 100%;
 }
 
