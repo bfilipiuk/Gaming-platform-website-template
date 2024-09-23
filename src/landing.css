@@ -183,6 +183,7 @@ html {
     align-items: center;
     margin-top: 30px;
     width: 100%;
+    /* max-width: 500px; */
     height: 70px;
 }
 
@@ -221,13 +222,27 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* max-width: 100%; */
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
     padding-bottom: 30vw;
     background:
         url('/public/backgrounds/dots-bg-top.svg') no-repeat top center,
         url('/public/backgrounds/dots-bg.svg') center top;
     background-size: 100% auto, 100% auto;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 2100px;
+}
+
+.header-columns-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .right-header {
@@ -432,15 +447,14 @@ input[type="checkbox"] {
 /* style do video */
 .video-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-top: 8rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
     width: 100%;
 }
 
 .video-frame {
     width: 100%;
+    margin: 0 7rem;
 }
 
 /* style do graffiti */
@@ -1219,6 +1233,19 @@ input[type="checkbox"] {
         width: 6vw;
     }
 
+    .custom-tile {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .tile-wrapper {
+        width: 41vw;
+    }
+
+    .tile-wrapper .tile-text{
+        font-size: 5vw;
+    }
+
     .header-wrapper {
         /* margin: 0 10vw; */
     }
@@ -1454,4 +1481,9 @@ input[type="checkbox"] {
         font-size: 5vw;
         padding: 2vw;
     }
+}
+
+
+@media(min-width: 2100px) {
+
 }
