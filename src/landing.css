@@ -173,6 +173,10 @@ html {
     left: -0.1rem;
     top: -38rem;
 }
+
+.tiles-column .mobile {
+    display: none;
+}
 /* Koniec stylowania ramek */
 
 /* Style navbar */
@@ -242,6 +246,7 @@ html {
 .header-columns-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -465,10 +470,8 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow-x: hidden; */
     position: absolute;
     top: -20vw;
-    /* z-index: 1; */
 }
 
 .gradient-container {
@@ -478,7 +481,7 @@ input[type="checkbox"] {
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    height: 300px;
+    height: 600px;
     background: linear-gradient(to bottom, 
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 1) 50%,
@@ -487,7 +490,6 @@ input[type="checkbox"] {
 }
 
 .beGOAT-graffiti {
-    /* transform: translateX(5%); */
     z-index: 2;
     width: 110vw;
     max-width: 2200px;
@@ -773,6 +775,18 @@ input[type="checkbox"] {
 }
 
 @media(min-width: 2101px) {
+    .header-wrapper {
+        padding-bottom: 650px;
+    }
+
+    .about-gaming-wrapper {
+        padding-top: 400px;
+    }
+
+    .beGOAT-graffiti-container {
+        top: -420px;
+    }
+
     .gaming-essence-container .title {
         font-size: 74px;
     }
@@ -1363,6 +1377,14 @@ input[type="checkbox"] {
 
 /*! Media queries !*/
 @media(max-width: 1101px) {
+    .tiles-column .mobile {
+        display: block;
+    }
+
+    .tiles-column .desktop {
+        display: none;
+    }
+
     .navbar  ul, .terminal1, .logo-animation-container, .logo-animation{
         display: none;
     }
