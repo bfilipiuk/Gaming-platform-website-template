@@ -306,8 +306,11 @@ html {
 .cta-terminal-wrapper {
     border: 1px solid white;
     margin-top: 8rem;
-    width: 100%;
     font-family: 'Consolas';
+}
+
+.terminal1 {
+    width: 100%;
 }
 
 .terminal-navbar {
@@ -341,7 +344,7 @@ html {
     color: white;
 }
 
-.terminal-content {
+.terminal1 .terminal-content, .terminal2 .terminal-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -593,6 +596,7 @@ input[type="checkbox"] {
 
 .terminal2 {
     position: absolute;
+    width: 800px;
     top: -30.5vw;
     top: -37rem;
     z-index: 2;
@@ -661,46 +665,13 @@ input[type="checkbox"] {
     z-index: 2;
 }
 
-@media(min-width: 2450px) {
-    .gaming-essence-container .title {
-        font-size: 95px;
-    }
-
-    .essence-text-container .text-columns-container {
-        gap: 25px;
-        margin-top: 65px;
-    }
-
-    .essence-text-container .text-columns-container .column .header {
-        font-size: 55px;
-    }
-    
-    .essence-text-container .text-columns-container .column .text {
-        font-size: 45px;
-    }
-
-    .essence-text-container .text-columns-container .column {
-        gap: 20px;
-        width: 540px;
-    }
-
-    .gaming-essence-container .sofa-characters {
-        bottom: 0px;
-        left: 3%;
-        z-index: 2;
-    }
-}
-
 /* Style do sekcji fav games*/
 .fav-games-section {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 985px;
     display: flex;
     justify-content: center;
-    /* flex-direction: row; */
-    /* margin-top: 10rem; */
-    /* overflow-x: hidden; */
 }
 
 .fav-games-section::before {
@@ -732,9 +703,12 @@ input[type="checkbox"] {
 }
 
 .fav-games-main, .challanges-main {
+    display: flex;
+    align-items: center;
     z-index: 2;
     max-width: 2100px;
     position: relative;
+    /* border: 1px solid white; */
 }
 
 .games-text-container {
@@ -744,14 +718,16 @@ input[type="checkbox"] {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
-    width: 45%;
+    /* gap: 4vw; */
+    gap: 60px;
+    width: 64%;
 }
 
 .games-header {
     color: white;
     /* font-size: 80px; */
-    font-size: 3.5vw;
+    /* font-size: 3.5vw; */
+    font-size: 5rem;
     font-weight: 600;
 }
 
@@ -762,18 +738,21 @@ input[type="checkbox"] {
 }
 
 .games-text {
-    font-size: 48px;
-    font-size: 2.2vw;
+    /* font-size: 48px; */
+    font-size: 3rem;
+    /* font-size: 2.2vw; */
     font-weight: 500;
     color: #000000;
 }
 
 .fav-games-image {
     position: absolute;
+    transform: scaleX(-1);
     bottom: 0;
-    right: 0;
-    width: 45vw;
-    max-width: 945px;
+    right: -30rem;
+    /* right: -35vw; */
+    width: 1050px;
+    /* max-width: 945px; */
     height: auto;
     z-index: 3;
 }
@@ -818,65 +797,15 @@ input[type="checkbox"] {
         left: 7%;
         z-index: 2;
     }
-
-    .games-header {
-        font-size: 74px;
-    }
-        
-    .games-text {
-        font-size: 48px;
-    }
-
-    .challanges-text-container .challanges-header {
-        font-size: 74px;
-    }
-        
-    .challanges-text-container .challanges-text {
-        font-size: 48px;
-    }
-
-    .challanges-image {
-        width: 750px;
-        max-width: 750px;
-    }
-
-    .rewards-text-container .rewards-header {
-        font-size: 74px;
-    }
-
-    .rewards-text-container .rewards-text {
-        font-size: 48px
-    }
-
-    .rewards-section .rewards-image {
-        width: 800px;
-    }
-
-    .tournaments-text-container .tournaments-header {
-        font-size: 74px;
-    }
-
-    .tournaments-text-container .tournaments-text {
-        font-size: 48px
-    }
-
-    .account-text-container .account-header {
-        font-size: 74px;
-    }
-
-    .account-text-container .account-text {
-        font-size: 48px;
-    }
 }
 
 /* Style do sekcji challanges */
 .challanges-section {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 985px;
     display: flex;
     justify-content: center;
-    /* overflow-x: hidden; */
 }
 
 .challanges-main {
@@ -920,14 +849,14 @@ input[type="checkbox"] {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
-    width: 45%;
+    gap: 60px;
+    width: 35%;
 }
 
 .challanges-header {
     color: white;
     /* font-size: 80px; */
-    font-size: 3.5vw;
+    font-size: 5rem;
     font-weight: 600;
 }
 
@@ -938,18 +867,22 @@ input[type="checkbox"] {
 }
 
 .challanges-text {
-    font-size: 48px;
-    font-size: 2.2vw;
+    /* font-size: 48px; */
+    font-size: 3rem;
     font-weight: 500;
     color: white;
+}
+
+.challanges-main .mobile {
+    display: none;
 }
 
 .challanges-image {
     position: absolute;
     bottom: 0;
     left: 7rem;
-    width: 32vw;
-    max-width: 750px;
+    width: 850px;
+    /* max-width: 750px; */
     /* width: 40rem; */
     height: auto;
     z-index: 3;
@@ -959,13 +892,14 @@ input[type="checkbox"] {
 .rewards-section {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 985px;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
 }
 
 .rewards-main {
+    display: flex;
+    align-items: center;
     z-index: 2;
     max-width: 2100px;
     position: relative;
@@ -1006,25 +940,24 @@ input[type="checkbox"] {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
-    width: 45%;
+    gap: 60px;
+    width: 40%;
 }
 
 .rewards-header {
     color: white;
-    font-size: 3.5vw;
+    font-size: 5rem;
     font-weight: 600;
 }
 
 .rewards-header .wyplacaj {
     background-color: #8400FF;
     padding: 0px 10px;
-    margin: -5px;
 }
 
 .rewards-text {
-    font-size: 48px;
-    font-size: 2.2vw;
+    /* font-size: 48px; */
+    font-size: 3rem;
     font-weight: 500;
     color: #ffffff;
 }
@@ -1034,7 +967,7 @@ input[type="checkbox"] {
     top: 50%;
     transform: translateY(-50%);
     right: 7rem;
-    width: 40vw;
+    width: 850px;
     height: auto;
     z-index: 3;
 }
@@ -1043,12 +976,14 @@ input[type="checkbox"] {
 .tournaments-section {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 985px;
     display: flex;
     justify-content: center;
 }
 
 .tournaments-main {
+    display: flex;
+    align-items: center;
     z-index: 2;
     max-width: 2100px;
     position: relative;
@@ -1091,14 +1026,14 @@ input[type="checkbox"] {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
-    width: 55%;
+    gap: 60px;
+    width: 65%;
 }
 
 .tournaments-header {
     color: white;
     /* font-size: 80px; */
-    font-size: 3.5vw;
+    font-size: 5rem;
     font-weight: 600;
 }
 
@@ -1109,8 +1044,7 @@ input[type="checkbox"] {
 }
 
 .tournaments-text {
-    font-size: 48px;
-    font-size: 2.2vw;
+    font-size: 3rem;
     font-weight: 500;
     color: rgb(0, 0, 0);
 }
@@ -1118,9 +1052,9 @@ input[type="checkbox"] {
 .tournaments-image {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 23vw;
-    max-width: 490px;
+    left: -5rem;
+    width: 540px;
+    /* max-width: 490px; */
     height: auto;
     z-index: 3;
 }
@@ -1129,12 +1063,14 @@ input[type="checkbox"] {
 .account-section {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 985px;
     display: flex;
     justify-content: center;
 }
 
 .account-main {
+    display: flex;
+    align-items: center;
     z-index: 2;
     max-width: 2100px;
     position: relative;
@@ -1176,26 +1112,24 @@ input[type="checkbox"] {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 4vw;
-    width: 45%;
+    gap: 60px;
+    width: 60%;
 }
 
 .account-header {
     color: white;
     /* font-size: 80px; */
-    font-size: 3.5vw;
+    font-size: 5rem;
     font-weight: 600;
 }
 
 .account-header .jedno-konto {
     background-color: #8400FF;
     padding: 0px 10px;
-    margin: -5px;
 }
 
 .account-text {
-    font-size: 48px;
-    font-size: 2.2vw;
+    font-size: 3rem;
     font-weight: 500;
     color: #ffffff;
 }
@@ -1213,11 +1147,13 @@ input[type="checkbox"] {
 }
 
 .account-image {
+    transform: scaleX(-1);
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 40vw;
-    max-width: 800px;
+    right: -20rem;
+    /* width: 40vw; */
+    width: 910px;
+    /* max-width: 800px; */
     height: auto;
     z-index: 3;
 }
@@ -1225,8 +1161,7 @@ input[type="checkbox"] {
 /* Style do footer */
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     border: 3px solid #05F4F9;
     border-left: none;
     border-right: none;
@@ -1235,6 +1170,14 @@ input[type="checkbox"] {
     /* background-image: url('/public/backgrounds/footer-bg.svg');
     background-size: cover;
     background-position: center; */
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2100px;
 }
 
 .company-info, .useful-links, .contact {
@@ -1333,20 +1276,25 @@ input[type="checkbox"] {
     color: white;
 }
 
+.big-cta-terminal .terminal-main {
+    display: flex;
+    justify-content: center;
+    background-color: #0C0C0C;
+}
+
 .big-cta-terminal .terminal-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
-    /* padding: 4rem; */
-    padding-left: 4rem;
+    max-width: 2100px;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    color: white;
 }
 
 .big-cta-terminal .terminal-content .logo-container{
     /* width: 200px; */
-    margin-right: 8rem;
+    /* margin-right: 8rem; */
     padding: 50px;
 }
 
@@ -1359,6 +1307,7 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 7rem;
     width: 40%;
 }
 
@@ -1396,7 +1345,7 @@ input[type="checkbox"] {
     
 }
 
-@media(max-width: 1101px) {
+@media(max-width: 768px) {
     .header-columns-container {
         /* display: flex;
         justify-content: center; */
@@ -1500,13 +1449,6 @@ input[type="checkbox"] {
         width: 41vw;
     }
 
-    .tile-wrapper .tile-text{
-    }
-
-    .header-wrapper {
-        /* margin: 0 10vw; */
-    }
-
     .left-header .heading-text {
         padding-top: 15vw;
     }
@@ -1605,6 +1547,10 @@ input[type="checkbox"] {
         overflow-x: hidden;
     }
 
+    .fav-games-section, .challanges-section, .rewards-section, .tournaments-section, .account-section {
+        min-height: 40vw;
+    }
+
     .games-text-container, .rewards-text-container {
         margin-top: 8vw;
         margin-left: 8vw;
@@ -1620,7 +1566,7 @@ input[type="checkbox"] {
         margin-bottom: 8vw;
         margin-right: 8vw;
         gap: 2vw;
-        width: 50%;
+        width: 70%;
     }
 
     .games-header, .challanges-header, .rewards-header, .tournaments-header, .account-header {
@@ -1641,7 +1587,7 @@ input[type="checkbox"] {
 
     .account-text {
         font-size: 4vw;
-        width: 90%;
+        width: 60%;
     }
 
     .challanges-text, .tournaments-text  {
@@ -1655,16 +1601,16 @@ input[type="checkbox"] {
     }
 
     .fav-games-image {
-        width: 90vw;
-        right: -45vw;
+        width: 115vw;
+        right: -75vw;
     }
 
-    .challanges-text-container, .tournaments-text-container {
+    .challanges-text-container {
         margin-top: 8vw;
         margin-right: 8vw;
         margin-bottom: 8vw;
         gap: 2vw;
-        width: 50%;
+        width: 55%;
     }
 
     .tournaments-text-container {
@@ -1672,12 +1618,21 @@ input[type="checkbox"] {
         margin-right: 8vw;
         margin-bottom: 8vw;
         gap: 2vw;
-        width: 60%;
+        width: 55%;
     }
 
+    .challanges-main .desktop {
+        display: none;
+    }    
+
+    .challanges-main .mobile {
+        display: block;
+    }
+    
+
     .challanges-image {
-        width: 60vw;
-        left: 4vw;
+        width: 52vw;
+        left: -15vw;
     }
 
     .rewards-image {
@@ -1686,21 +1641,29 @@ input[type="checkbox"] {
     }
 
     .tournaments-image {
-        width: 40vw;
-        left: -10vw;
+        width: 50vw;
+        left: -20vw;
     }
 
     .account-image {
         width: 88vw;
-        right: -40vw;
+        right: -45vw;
     }
 
-    .footer {
+    .footer-main {
         flex-direction: column;
     }
 
     .company-info, .useful-links, .contact {
-        margin-left: 7rem;
+        margin: 4vw 8vw;
+    }
+
+    .company-info img {
+        width: 30vw;
+    }
+
+    .company-info span, .useful-links span, .useful-links a, .contact span, .contact a {
+        font-size: 4vw;
     }
 
     .contact .contact-btn {
@@ -1711,9 +1674,13 @@ input[type="checkbox"] {
         display: none;
     }
 
+    .info-form-container {
+        margin: 0;
+    }
+
     .info-form-container .form {
         width: 87vw;
-        margin-top: 0;
+        margin: 0;
     }
 
     .big-cta-terminal .terminal-content {
@@ -1723,29 +1690,4 @@ input[type="checkbox"] {
     .info-form-container .form input,  .info-form-container .form button{
         width: 100%;
     }
-    
-}
-
-@media(max-width: 500px) {
-    .company-info img {
-        width: 45vw;
-    }
-
-    .company-info span, .useful-links, .contact {
-        font-size: 6.5vw;
-    }
-
-    .company-info, .useful-links, .contact {
-        margin-left: 10vw;
-    }
-
-    .contact .contact-btn {
-        font-size: 5vw;
-        padding: 2vw;
-    }
-}
-
-
-@media(min-width: 2100px) {
-
 }
