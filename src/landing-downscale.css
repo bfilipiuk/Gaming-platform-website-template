@@ -8,176 +8,7 @@ body {
 
 html {
     overflow-x: hidden;
-
-    /* Zmienne do ramek */
-    --x1: 25px;
-    --x2: 55px;
-    --x3: 60px;
-    --x4: 5px;
-    --x5: 10px;
-    --x6: 25px;
-    --y1: 5px;
-    --y2: 20px;
-    --y3: 50px;
-    --y4: 55px;
-    --y5: 105px;
-    --y6: 115px;
-    --y7: 85px;
-    --y8: 75px;
-    --y9: 15px;
-
-    --outline-width: 2px;
 }
-
-/* Style do ramek */
-.custom-tile {
-    width: 342px;
-    height: 422px;
-    position: relative;
-}
-
-.custom-tile .custom-tile-shadow {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: calc(100% - 40px);
-    width: calc(100% - 40px);
-    z-index: -1;
-    background-color: #8400FF;
-    box-shadow: #8400FF -10px 10px 90px 20px;
-}
-
-.custom-tile-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: rgb(48, 237, 243);
-    left: var(--outline-width);
-    top: var(--outline-width);
-    width: calc(100% - 2 * var(--outline-width));
-    height: calc(100% - 2 * var(--outline-width));
-    clip-path: polygon(var(--x4) var(--y2),
-            var(--x1) 0,
-            var(--x2) 0,
-            var(--x3) var(--y1),
-            calc(100% - var(--x3)) var(--y1),
-            calc(100% - var(--x2)) 0,
-            calc(100% - var(--x1)) 0,
-            calc(100% - var(--x4)) var(--y2),
-            calc(100% - var(--x4)) var(--y3),
-            calc(100% - var(--x5)) var(--y4),
-            calc(100% - var(--x5)) var(--y5),
-            100% var(--y6),
-            100% calc(100% - var(--y7)),
-            calc(100% - var(--x5)) calc(100% - var(--y8)),
-            calc(100% - var(--x5)) calc(100% - var(--y9)),
-            calc(100% - var(--x6)) 100%,
-            var(--x6) 100%,
-            var(--x5) calc(100% - var(--y9)),
-            var(--x5) calc(100% - var(--y8)),
-            0 calc(100% - var(--y7)),
-            0 var(--y6),
-            var(--x5) var(--y5),
-            var(--x5) var(--y4),
-            var(--x4) var(--y3));
-}
-
-.custom-tile-content img {
-    height: 100%;
-}
-
-.no-cheaters-tile img {
-    height: auto;
-    width: 100%;
-}
-
-.custom-tile-outline {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(93, 0, 255);
-    clip-path: polygon(var(--x1) 0,
-            calc(var(--x2) + 2*var(--outline-width)) 0,
-            calc(var(--x3) + 2*var(--outline-width)) var(--y1),
-            calc(100% - var(--x3) - 2*var(--outline-width)) var(--y1),
-            calc(100% - var(--x2) - 2*var(--outline-width)) 0,
-            calc(100% - var(--x1)) 0,
-            calc(100% - var(--x4)) var(--y2),
-            calc(100% - var(--x4)) calc(var(--y3) + 2*var(--outline-width)),
-            calc(100% - var(--x5)) calc(var(--y4) + 2*var(--outline-width)),
-            calc(100% - var(--x5)) var(--y5),
-            100% var(--y6),
-            100% calc(100% - var(--y7)),
-            calc(100% - var(--x5)) calc(100% - var(--y8)),
-            calc(100% - var(--x5)) calc(100% - var(--y9)),
-            calc(100% - var(--x6)) 100%,
-            var(--x6) 100%,
-            var(--x5) calc(100% - var(--y9)),
-            var(--x5) calc(100% - var(--y8)),
-            0 calc(100% - var(--y7)),
-            0 var(--y6),
-            var(--x5) var(--y5),
-            var(--x5) calc(var(--y4) + 2*var(--outline-width)),
-            var(--x4) calc(var(--y3) + 2*var(--outline-width)),
-            var(--x4) var(--y2));
-}
-
-.tiles-column {
-    display: flex;
-    flex-direction: column;
-    gap: 7rem;
-}
-
-.tile-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 355px;
-}
-
-.tile-wrapper .tile-text {
-    padding-left: 1rem;
-}
-
-.tile-text {
-    font-size: 32px;
-    font-weight: 600;
-    color: white;
-}
-
-.tile-text .highlight {
-    color: #05F4F9;
-}
-
-.right-tiles-column {
-    position: relative;
-    padding-top: 8rem;
-}
-
-.left-tiles-column {
-    position: relative;
-    padding-top: 16rem;
-}
-
-.left-tiles-column .blue-stripe {
-    width: 9px;
-    position: absolute;
-    left: -0.2rem;
-    top: -30rem;
-}
-
-.right-tiles-column .purple-stripe {
-    position: absolute;
-    width: 11px;
-    left: -0.1rem;
-    top: -38rem;
-}
-
-.tiles-column .mobile {
-    display: none;
-}
-/* Koniec stylowania ramek */
 
 /* Style navbar */
 .navbar {
@@ -185,10 +16,10 @@ html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 25px;
     width: 100%;
     /* max-width: 500px; */
-    height: 70px;
+    height: 50px;
 }
 
 .navbar .logo {
@@ -205,10 +36,10 @@ html {
 }
 
 .navbar ul li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: white;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
 }
 
 .tgl-btn {
@@ -220,13 +51,13 @@ html {
     width: 2.5rem;
     height: auto;
 }
+/* Koniec style navbar */
 
 /* Style header */
 .header-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: center;
     width: 100%;
     padding-bottom: 30vw;
@@ -239,6 +70,7 @@ html {
 .header-main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 2100px;
 }
@@ -250,34 +82,29 @@ html {
     justify-content: space-between;
 }
 
-.right-header {
-    /* width: 800px;
-    height: 800px; */
-    /* border: 1px solid white; */
-    margin-right: 7rem;
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    /* width: 49%; */
-}
-
 .left-header {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white; */
     width: 40%;
     margin-left: 7rem;
 }
 
-.left-header .heading-text {
+.right-header {
+    margin-right: 7rem;
     display: flex;
-    flex-direction: column;
-    padding-top: 19rem;
+    flex-direction: row;
+    gap: 4rem;
 }
 
-.left-header .heading-text span {
-    color: white;
-    font-size: 8rem;
+.heading-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 11rem;
+}
+
+.heading-text span {
+    color: rgb(255, 255, 255);
+    font-size: 5.5rem;
     font-weight: 500;
 }
 
@@ -286,8 +113,8 @@ html {
     transform: translateY(0.85rem);
     background-color: #8400FF;
     box-shadow: 0px 0px 100px 10px #8400FF;
-    width: 45rem;
-    height: 8rem;
+    width: 31.5rem;
+    height: 5rem;
 }
 
 .left-header .heading-text .autotype {
@@ -302,10 +129,77 @@ html {
     font-weight: 600;
 }
 
+/* Style do ramek */
+.custom-tile {
+    width: 210px;
+    height: 258px;
+    position: relative;
+    box-shadow: 0px 0px 40px #8400FF;
+    background-color: #8400ff69;
+}
+
+.custom-tile img {
+    width: 100%;
+    height: auto;
+}
+
+.tiles-column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.tile-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 200px;
+}
+
+.tile-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    color: white;
+}
+
+.tile-text .highlight {
+    color: #05F4F9;
+}
+
+.left-tiles-column {
+    position: relative;
+    padding-top: 180px;
+}
+
+.blue-stripe {
+    position: absolute;
+    width: 7px;
+    left: 0px;
+    top: -980px;
+}
+
+.right-tiles-column {
+    position: relative;
+    padding-top: 50px;
+}
+
+.purple-stripe {
+    position: absolute;
+    width: 7px;
+    left: 0px;
+    top: -1080px;
+}
+
+.tiles-column .mobile {
+    display: none;
+}
+/* Koniec stylowania ramek */
+
 /* Style terminal cta */
 .cta-terminal-wrapper {
     border: 1px solid white;
-    margin-top: 8rem;
+    margin-top: 70px;
     font-family: 'Consolas';
 }
 
@@ -321,7 +215,8 @@ html {
 }
 
 .terminal-navbar .buttons {
-    padding: 15px 10px;
+    padding: 10px 10px;
+    height: 10px;
 }
 
 .terminal-card {
@@ -330,7 +225,7 @@ html {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 8px;
+    padding: 5px;
     background-color: #0C0C0C;
     position: absolute;
     bottom: 0;
@@ -340,22 +235,41 @@ html {
 .terminal-card .icon-text-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     color: white;
+}
+
+.terminal-card .icon-text-container .terminal-icon {
+    height: 15px;
+}
+
+.terminal-card .icon-text-container span{
+    font-size: 0.8rem;
+}
+
+.terminal-card .x-icon {
+    height: 10px;
+    padding-right: 5px;
 }
 
 .terminal1 .terminal-content, .terminal2 .terminal-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     color: white;
-    padding: 20px 35px;
-    padding-bottom: 35px;
+    padding: 10px 25px;
+    padding-bottom: 25px;
     background-color: #0C0C0C;
 }
 
 .terminal-content .begoat-terminal-text {
-    font-size: 11px;
+    font-size: 8px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.terminal-content .regular-terminal-text {
+    font-size: 10px;
     font-weight: 400;
     margin: 0;
 }
@@ -366,6 +280,12 @@ html {
     gap: 20px;
 }
 
+.agreement-text {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+}
+
 /* !style do checkboxa! */
 input[type="checkbox"] {
     visibility: hidden;
@@ -373,7 +293,7 @@ input[type="checkbox"] {
 
 .checkboxOverride {
     position: relative;
-    width: 16px;
+    width: 12px;
 }
 
 .checkboxOverride input[type="checkbox"]:checked + label:after {
@@ -384,11 +304,11 @@ input[type="checkbox"] {
     background: none repeat scroll 0 0 #000000;
     border: 2px solid #ffffff;
     cursor: pointer;
-    height: 16px;
+    height: 12px;
     left: 0;
     position: absolute;
     top: 0;
-    width: 16px;
+    width: 12px;
 }
   
 .checkboxOverride label:after {
@@ -397,7 +317,7 @@ input[type="checkbox"] {
     content: "";
     height: 30%;
     width: 60%;
-    left: 15%;
+    left: 10%;
     top: 20%;
     opacity: 0;
     position: absolute;
@@ -408,14 +328,14 @@ input[type="checkbox"] {
 /* !koniec style do checkboxa! */
 
 .terminal-content .input {
-    width: 19rem;
+    width: 225px;
     color: #05F4F9;
     background-color: black;
     outline: none;
     border: 2px solid white;
-    padding: 8px;
+    padding: 4px 6px;
     font-family: 'Rajdhani';
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 500;
     box-sizing: border-box;
 }
@@ -429,15 +349,15 @@ input[type="checkbox"] {
 }
 
 .terminal-content .button {
-    width: 19rem;
+    width: 225px;
     color: #000000;
     background-color: rgb(255, 255, 255);
     outline: none;
     border: 4px solid #05F4F9;
     border-style: none none solid none;
-    padding: 8px;
+    padding: 4px 6px;
     font-family: 'Rajdhani';
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -449,7 +369,7 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 70px;
 }
 
 .logo-animation-container img {
@@ -460,10 +380,11 @@ input[type="checkbox"] {
 .video-container {
     display: flex;
     justify-content: center;
-    margin-top: 8rem;
-    width: auto;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    margin-top: 100px;
+    width: 70%;
+    /* width: auto; */
+    /* margin-left: 7rem;
+    margin-right: 7rem; */
 }
 
 .video-frame {
@@ -1278,29 +1199,6 @@ input[type="checkbox"] {
 
 .info-form-container .form input,  .info-form-container .form button{
     width: 18rem;
-}
-
-@media(max-width: 1850px) {
-    .rewards-image {
-        right: 5vw;
-    }
-}
-
-/*! Media queries !*/
-@media(max-width: 1841px) {
-    .left-header .heading-text span {
-        font-size: 6rem;
-    }
-
-    .autotype-bg {
-        width: 34rem;
-        height: 6rem;
-    }
-
-    .left-header {
-        width: 33%;
-    }
-    
 }
 
 @media(max-width: 768px) {
