@@ -22,7 +22,7 @@ html {
     color: white;
     border: none;
     padding: 5px 12px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 30px;
     cursor: pointer;
 }
@@ -171,6 +171,12 @@ html {
     position: relative;
     box-shadow: 0px 0px 40px #8400FF;
     background-color: #8400ff69;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.custom-tile:hover {
+    transform: scale(1.05);
 }
 
 .custom-tile img {

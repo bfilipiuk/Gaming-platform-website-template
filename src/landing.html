@@ -85,21 +85,21 @@
                     <div class="left-tiles-column tiles-column">
                         <img class="blue-stripe" src="/public/asset-stripe-blue.svg">
                         <div class="tile-wrapper">
-                            <div class="custom-tile fav-games-tile">
+                            <div class="custom-tile fav-games-tile" data-target="fav-games-section">
                                 <img class="desktop" src="/public/tiles/games.svg">
                                 <img class="mobile" src="/public/tiles/games-mobile.svg">
                             </div>
                             <span class="tile-text">Twoje<span class="highlight"> ulubione gry </span>w jednym miejscu</span>
                         </div>
                         <div class="tile-wrapper">
-                            <div class="custom-tile rewards-tile">
+                            <div class="custom-tile rewards-tile" data-target="rewards-section">
                                 <img class="desktop" src="/public/tiles/rewards.svg">
                                 <img class="mobile" src="/public/tiles/rewards-mobile.svg">
                             </div>
                             <span class="tile-text">Gra o<span class="highlight"> więcej </span>niż tylko punkty i satysfakcje.</span>
                         </div>
                         <div class="tile-wrapper">
-                            <div class="custom-tile no-cheaters-tile">
+                            <div class="custom-tile no-cheaters-tile" data-target="account-section">
                                 <img class="desktop" src="/public/tiles/account.svg">
                                 <img class="mobile" src="/public/tiles/account-mobile.svg">
                             </div>
@@ -109,21 +109,21 @@
                     <div class="right-tiles-column tiles-column">
                         <img class="purple-stripe" src="/public/asset-stripe-purple.svg">
                         <div class="tile-wrapper">
-                            <div class="custom-tile gaming-essence-tile">
+                            <div class="custom-tile gaming-essence-tile" data-target="gaming-essence-section">
                                 <img class="desktop" src="/public/tiles/gaming-essence.svg">
                                 <img class="mobile" src="/public/tiles/gaming-essence-mobile.svg">
                             </div>
                             <span class="tile-text"><span class="highlight">Esencja gamingu </span>w nieznanej dotąd odsłonie.</span>
                         </div>
                         <div class="tile-wrapper">
-                            <div class="custom-tile rivarly-tile">
+                            <div class="custom-tile rivarly-tile"  data-target="challanges-section">
                                 <img class="desktop" src="/public/tiles/rivarly.svg">
                                 <img class="mobile" src="/public/tiles/rivarly-mobile.svg">
                             </div>
                             <span class="tile-text"><span class="highlight">Nowy wymiar rywalizacji</span>, wyzwań i emocji.</span>
                         </div>
                         <div class="tile-wrapper">
-                            <div class="custom-tile tournaments-tile">
+                            <div class="custom-tile tournaments-tile" data-target="tournaments-section">
                                 <img class="desktop" src="/public/tiles/tournaments.svg">
                                 <img class="mobile" src="/public/tiles/tournaments-mobile.svg">
                             </div>
@@ -157,7 +157,7 @@
             </span>
         </div>
 
-        <div class="gaming-essence-container">
+        <div class="gaming-essence-container" id="gaming-essence-section">
             <div class="cta-terminal-wrapper terminal2">
                 <div class="terminal-navbar">
                     <img class="buttons" src="/public/icons/terminalButtons.svg">
@@ -229,7 +229,7 @@
         </div>
     </div>
 
-    <div class="fav-games-section">
+    <div class="fav-games-section" id="fav-games-section">
         <div class="fav-games-main">
             <div class="games-text-container">
                 <span class="games-header"><span class="ulubione-gry">Ulubione gry</span> w jednym miejscu</span>
@@ -247,7 +247,7 @@
         </div>
     </div>
 
-    <div class="challanges-section">
+    <div class="challanges-section" id="challanges-section">
         <div class="challanges-main">
             <div class="challanges-img-container">
                 <img class="challanges-image desktop" src="/public/characters-ready/woman-challange.png">
@@ -264,7 +264,7 @@
         </div>
     </div>
 
-    <div class="rewards-section">
+    <div class="rewards-section" id="rewards-section">
         <div class="rewards-main">
             <div class="rewards-text-container">
                 <span class="rewards-header">Graj, zbieraj, <span class="wyplacaj">wypłacaj</span></span>
@@ -280,7 +280,7 @@
         </div>
     </div>
 
-    <div class="tournaments-section">
+    <div class="tournaments-section" id="tournaments-section">
         <div class="tournaments-main">
             <div class="tournaments-img-container">
                 <img class="tournaments-image" src="/public/characters-ready/sprinter.png">
@@ -297,7 +297,7 @@
         </div>
     </div>
 
-    <div class="account-section">
+    <div class="account-section" id="account-section">
         <div class="account-main">
             <div class="account-text-container">
                 <span class="account-header">Jeden gracz - <span class="jedno-konto">Jedno konto</span></span>
@@ -425,6 +425,21 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+    </script>
+
+    <!-- scroll do sekcji -->
+    <script>
+        document.querySelectorAll('.custom-tile').forEach(function(tile) {
+            tile.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 
     <!-- responsywny navbar -->
