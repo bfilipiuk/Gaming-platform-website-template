@@ -629,8 +629,6 @@ input[type="checkbox"] {
     justify-content: space-between;
     z-index: 2;
     max-width: 2100px;
-    /* position: relative; */
-    border: 2px solid white;
 }
 
 .games-text-container {
@@ -642,7 +640,6 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 60px;
     width: 60%;
-    border: 2px solid red;
 }
 
 .games-header {
@@ -666,7 +663,6 @@ input[type="checkbox"] {
     position: relative;
     height: 100%;
     width: 380px;
-    border: 2px solid #8400FF;
 }
 
 .fav-games-image {
@@ -720,8 +716,6 @@ input[type="checkbox"] {
     justify-content: space-between;
     z-index: 2;
     max-width: 2100px;
-    /* position: relative; */
-    border: 2px solid white;
 }
 
 .challanges-text-container {
@@ -734,7 +728,6 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 60px;
     width: 35%;
-    border: 2px solid red;
 }
 
 .challanges-header {
@@ -759,7 +752,6 @@ input[type="checkbox"] {
     position: relative;
     height: 100%;
     width: 700px;
-    border: 2px solid #ff0000;
 }
 
 .challanges-main .mobile {
@@ -819,8 +811,6 @@ input[type="checkbox"] {
     justify-content: space-between;
     z-index: 2;
     max-width: 2100px;
-    /* position: relative; */
-    border: 2px solid rgb(255, 0, 0);
 }
 
 .rewards-text-container {
@@ -832,7 +822,6 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 60px;
     width: 40%;
-    border: 2px solid red;
 }
 
 .rewards-header {
@@ -856,7 +845,6 @@ input[type="checkbox"] {
     position: relative;
     height: 100%;
     width: 600px;
-    border: 2px solid #ff0000;
 }
 
 .rewards-image {
@@ -912,8 +900,6 @@ input[type="checkbox"] {
     justify-content: space-between;
     z-index: 2;
     max-width: 2100px;
-    border: 2px solid rgb(255, 0, 0)
-    /* position: relative; */
 }
 
 .tournaments-text-container {
@@ -926,7 +912,6 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 60px;
     width: 65%;
-    border: 2px solid rgb(255, 0, 0)
 }
 
 .tournaments-header {
@@ -950,7 +935,6 @@ input[type="checkbox"] {
     position: relative;
     height: 100%;
     width: 320px;
-    border: 2px solid #ff0000;
 }
 
 .tournaments-image {
@@ -1006,7 +990,6 @@ input[type="checkbox"] {
     z-index: 2;
     max-width: 2100px;
     /* position: relative; */
-    border: 2px solid #ff0000;
 }
 
 .account-text-container {
@@ -1018,7 +1001,6 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: 60px;
     width: 60%;
-    border: 2px solid #ff0000;
 }
 
 .account-header {
@@ -1054,7 +1036,6 @@ input[type="checkbox"] {
     position: relative;
     height: 100%;
     width: 370px;
-    border: 2px solid #ff0000;
 }
 
 .account-image {
@@ -1429,7 +1410,8 @@ input[type="checkbox"] {
         display: none;
     }
 
-    .account-section {
+    /* Style do sekcji kafelkowych */
+    .account-section, .fav-games-section {
         overflow-x: hidden;
     }
 
@@ -1437,7 +1419,27 @@ input[type="checkbox"] {
         min-height: 40vw;
     }
 
-    .games-text-container, .rewards-text-container {
+    .games-header, .challanges-header, .rewards-header, .tournaments-header, .account-header {
+        font-size: 7vw;
+    }
+
+    .games-header .ulubione-gry, .challanges-header .header-highlight, .rewards-header .wyplacaj, .tournaments-header .header-highlight,
+    .account-header .jedno-konto 
+    {
+        font-size: 7vw;
+        padding: 0vw 0.5vw;
+    }
+
+    .games-text-container {
+        margin-top: 8vw;
+        margin-left: 8vw;
+        margin-bottom: 8vw;
+        margin-right: 8vw;
+        gap: 2vw;
+        width: 80%;
+    }
+
+    .rewards-text-container {
         margin-top: 8vw;
         margin-left: 8vw;
         margin-bottom: 8vw;
@@ -1453,42 +1455,6 @@ input[type="checkbox"] {
         margin-right: 8vw;
         gap: 2vw;
         width: 70%;
-    }
-
-    .games-header, .challanges-header, .rewards-header, .tournaments-header, .account-header {
-        font-size: 7vw;
-    }
-
-    .games-header .ulubione-gry, .challanges-header .header-highlight, .rewards-header .wyplacaj, .tournaments-header .header-highlight,
-    .account-header .jedno-konto 
-    {
-        font-size: 7vw;
-        padding: 0vw 0.5vw;
-    }
-
-    .games-text, .rewards-text {
-        font-size: 4vw;
-        width: 60%;
-    }
-
-    .account-text {
-        font-size: 4vw;
-        width: 60%;
-    }
-
-    .challanges-text, .tournaments-text  {
-        font-size: 4vw;
-        width: 100%;
-        margin-right: 8vw;
-    }
-
-    .fav-games-section {
-        overflow-x: hidden;
-    }
-
-    .fav-games-image {
-        width: 115vw;
-        right: -75vw;
     }
 
     .challanges-text-container {
@@ -1507,6 +1473,47 @@ input[type="checkbox"] {
         width: 55%;
     }
 
+    .games-text {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    .rewards-text {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    .account-text {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    .challanges-text {
+        font-size: 4vw;
+        width: 100%;
+        margin-right: 8vw;
+    }
+
+    .tournaments-text  {
+        font-size: 4vw;
+        width: 100%;
+        margin-right: 8vw;
+    }
+
+    .games-img-container, .challanges-img-container, .rewards-img-container, .tournaments-img-container, .account-img-container {
+        width: auto;
+    }
+
+    .fav-games-image {
+        width: 115vw;
+        left: -40vw;
+    }
+
+    .challanges-image {
+        width: 52vw;
+        right: -35vw;
+    }
+
     .challanges-main .desktop {
         display: none;
     }    
@@ -1514,27 +1521,22 @@ input[type="checkbox"] {
     .challanges-main .mobile {
         display: block;
     }
-    
-
-    .challanges-image {
-        width: 52vw;
-        left: -15vw;
-    }
 
     .rewards-image {
         width: 65vw;
-        right: -25vw;
+        left: -35vw;
     }
 
     .tournaments-image {
         width: 50vw;
-        left: -20vw;
+        right: -30vw;
     }
 
     .account-image {
         width: 88vw;
-        right: -45vw;
+        left: -40vw;
     }
+    /* Koniec styli do sekcji kafelkowych */
 
     .footer-main {
         flex-direction: column;
