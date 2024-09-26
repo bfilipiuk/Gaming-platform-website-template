@@ -16,12 +16,14 @@
             <div class="header-columns-container">
                 <nav class="navbar">
                     <img class="logo" src="/public/logo-horizontal.svg">
-                    <ul>
-                        <li>Start</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                    <ul id="menu" class="menu">
+                        <li><a href="#">Start</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
-                    <div class="tgl-btn"><img class="tgl-icon" src="/public/icons/3dots.svg"></div>
+                    <div id="tgl-btn" class="tgl-btn">
+                        <img id="menuIcon" class="tgl-icon" src="/public/icons/3dots.svg">
+                    </div>
                 </nav>
                 <div class="left-header">
                     <div class="heading-text">
@@ -393,6 +395,8 @@
             </div>
         </div>
     </div>
+
+    <button class="scroll-btn" id="scroll-btn" onclick="scrollToTop()">⮝</button>
     
     <!-- biblioteka do animacji napisu w headerze-->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -405,6 +409,38 @@
             backSpeed: 100,
             loop: true
         });
+    </script>
+
+    <!-- scroll to top button -->
+    <script>
+        window.onscroll = function() {
+            const scrollTopBtn = document.getElementById("scroll-btn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- responsywny navbar -->
+    <script>
+        document.getElementById("tgl-btn").addEventListener("click", function() {
+            const menu = document.getElementById("menu");
+            const menuIcon = document.getElementById("menuIcon");
+
+            menu.classList.toggle("show");
+
+            if (menu.classList.contains("show")) {
+                menuIcon.src = "/public/icons/xmark.svg";
+            } else {
+                menuIcon.src = "/public/icons/3dots.svg";
+            }
+        });   
     </script>
 </body>
 </html>
