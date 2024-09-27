@@ -1142,7 +1142,8 @@ input[type="checkbox"] {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     max-width: 1700px;
     padding: 40px 0;
     color: white;
@@ -1173,6 +1174,7 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 7rem;
+    margin-right: auto;
     width: 40%;
 }
 
