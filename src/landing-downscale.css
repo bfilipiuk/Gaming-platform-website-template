@@ -405,15 +405,18 @@ input[type="checkbox"] {
 
 /* style do animacja logo */
 .logo-animation-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     margin-top: 70px;
 }
 
-.logo-animation-container img {
-    width: 80%;
+.logo-animation {
+    font-family: 'Cousine';
+    user-select: none;
+    color: white;
+    font-size: min(0.6vw, 0.8rem);
+    line-height: min(0.6vw, 12.81px);
+    letter-spacing: min(0.01vw, 0.2135px);
+    transform: translateX(7%);
 }
 
 /* style do video */

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header-wrapper">
@@ -78,7 +79,60 @@
                     </div>
 
                     <div class="logo-animation-container">
-                        <img class="logo-animation" src="/public/logo-ascii.svg">
+                        <pre class="logo-animation" id="ascii-art">
+
+      @@                                                                            @      
+      %%                                                                           %@      
+      %%                                                                           %%      
+      %%                                                                           %%      
+      %%                                                                           %%      
+      %%@                                                                         @%%      
+      %%%                                                                         %%%      
+      %%%@                                                                       %%%%      
+      %%%%                                                                       %%%%      
+      %%%%%                                                                     %%%%%      
+      %%%%%                                                                     %%%%%      
+      %%%%%%%                                                                  %%%%%%      
+      %%%%%##                                                                 ##%%%%%      
+       %%%##**                                                               **##%%%       
+       %%##***+                                                             +***##%%       
+        ##***+++=                                                         ++++***##        
+         #**+++===                                                       ===+++***         
+         **+++======                                                  =======+++**         
+          +++=========                                              -=========++*          
+           +===========-=                                        ---==========++           
+             =========------=                               ---------=========             
+              ========----------                         ------------========              
+                =====--------------::                :::--------------=====                
+                  ===-------------::::::          :::::::-------------===                  
+                    =-------------::::::::      :::::::::-------------=                    
+                       -----------::::::::::   .:::::::::-----------                       
+                         ---------::::::::::: :::::::::::---------                         
+                            -------:::::::::::::::::::::-------                            
+                              ------:::::::::::::::::::------                              
+                                -----:::::::::::::::::-----                                
+                                  ------:::::::::::------                                  
+                                    -------------------                                    
+                                     -----------------                                     
+                  ==                  ---------------                  ==                  
+                  ====                  -----------                  ====                  
+                  ======                 ---------                 ======                  
+                   ======                 -------                 ======                   
+                   +=======               -------               =======+                   
+                    ++========             -====             ========++                    
+                     +++========            ===            ========+++*                    
+                     +++++=======           ===           =======+++++                     
+                      **+++++=====           ==          =====+++++**                      
+                       ****++++++==          +          ==++++++****                       
+                        ##*****+++++                   +++++*****##                        
+                         ####********                 ********####                         
+                           %######***                 ***#######                           
+                            %%%%%#####               #####%%%%%                            
+                              %%%%%%%%               %%%%%%%%                              
+                                %%%%%%               %%%%%%                                
+                                   %%%               %%%                                   
+
+                        </pre>
                     </div>
                 </div>
                 <div class="right-header">
@@ -456,6 +510,44 @@
                 menuIcon.src = "/public/icons/3dots.svg";
             }
         });   
+    </script>
+
+    <!-- glitchowanie ascii -->
+    <script>
+        const originalAscii = document.getElementById('ascii-art').textContent.split('\n');
+            
+        function getRandomChar() {
+            const chars = '▒ ▓';
+            // const chars = "■□"
+            return chars[Math.floor(Math.random() * chars.length)];
+        }
+            
+        function glitchAscii() {
+            const asciiElement = document.getElementById('ascii-art');
+            const lines = asciiElement.textContent.split('\n');
+            
+            const randomLineIndex = Math.floor(Math.random() * lines.length);
+            let randomLine = lines[randomLineIndex];
+            
+            const start = Math.floor(Math.random() * randomLine.length);
+            const length = Math.floor(Math.random() * 25) + 10; // Szerokość wiersza
+                
+            let newLine = randomLine.split('');
+            for (let i = start; i < Math.min(start + length, randomLine.length); i++) {
+                newLine[i] = getRandomChar();
+            }
+            
+            lines[randomLineIndex] = newLine.join('');
+            asciiElement.textContent = lines.join('\n');
+            
+            setTimeout(() => {
+                lines[randomLineIndex] = originalAscii[randomLineIndex];
+                asciiElement.textContent = lines.join('\n');
+                }, 1000); // Czas trwania glitcha
+        }
+            
+        // Co ile uruchomienie
+        setInterval(glitchAscii, 400);  
     </script>
 </body>
 </html>
