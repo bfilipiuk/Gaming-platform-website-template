@@ -86,10 +86,11 @@ html {
     justify-content: center;
     width: 100%;
     padding-bottom: min(30vw, 548px);
-    /* background:
-        url('/public/backgrounds/dots-bg-top.svg') no-repeat top center,
-        url('/public/backgrounds/dots-bg.svg') center top;
-    background-size: 100% auto, 100% auto; */
+    background:
+        url('/public/backgrounds/top-bg-full.png') no-repeat top center,
+        url('/public/backgrounds/top-bg-dots.png') center top;
+    background-size: 100% auto, 100% auto;
+    background-position: 0 -80px;
 }
 
 .header-main {
