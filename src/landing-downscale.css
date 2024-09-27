@@ -86,10 +86,10 @@ html {
     justify-content: center;
     width: 100%;
     padding-bottom: min(30vw, 548px);
-    background:
+    /* background:
         url('/public/backgrounds/dots-bg-top.svg') no-repeat top center,
         url('/public/backgrounds/dots-bg.svg') center top;
-    background-size: 100% auto, 100% auto;
+    background-size: 100% auto, 100% auto; */
 }
 
 .header-main {
@@ -1219,9 +1219,10 @@ input[type="checkbox"] {
     border-right: none;
 
     /* tło działa git, ale psure performance ?? może sie polepszy jak będzie import z png */
-    /* background-image: url('/public/backgrounds/footer-bg.svg');
-    background-size: cover;
-    background-position: center; */
+    background-image: url('/public/backgrounds/footer-bg.png');
+    background-size: auto 800px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .footer-main {
