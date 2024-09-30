@@ -169,7 +169,6 @@ html {
 .custom-tile {
     width: 210px;
     height: 258px;
-    position: relative;
     box-shadow: 0px 0px 40px #8400FF;
     background-color: #8400ff69;
     transition: transform 0.2s ease-in-out;
@@ -188,7 +187,7 @@ html {
 .tiles-column {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 140px;
 }
 
 .tile-wrapper {
@@ -196,13 +195,16 @@ html {
     flex-direction: column;
     gap: 1rem;
     width: 200px;
+    position: relative;
 }
 
 .tile-text {
+    position: absolute;
     font-size: 1.5rem;
     font-weight: 500;
     padding-left: 1rem;
     color: white;
+    top: 270px;
 }
 
 .tile-text .highlight {
@@ -485,6 +487,7 @@ input[type="checkbox"] {
     background-size: cover;
     mix-blend-mode: hard-light;
     filter: contrast(150%);
+    opacity: 0.6;
     top: 0;
     left: 0;
     right: 0;
@@ -753,6 +756,7 @@ input[type="checkbox"] {
     background-size: cover;
     mix-blend-mode: hard-light;
     filter: contrast(150%);
+    opacity: 0.7;
     z-index: 1;
 }
 
@@ -845,7 +849,7 @@ input[type="checkbox"] {
     height: 100%;
     background-image: url('/public/textures/scratches-texture.png');
     background-size: 110% 180%;
-    opacity: 0.5;
+    opacity: 0.4;
     mix-blend-mode: lighten;
     filter: contrast(1000%);
     z-index: 1;
@@ -1021,7 +1025,7 @@ input[type="checkbox"] {
     width: 100vw;
     height: 100%;
     background-image: url('/public/textures/scratches-texture.png');
-    opacity: 0.7;
+    opacity: 0.5;
     background-size: cover;
     mix-blend-mode: hard-light;
     filter: contrast(200%);
@@ -1224,6 +1228,86 @@ input[type="checkbox"] {
 }
 /* Koniec duzego terminal cta */
 
+/* Style do faq */
+.faq-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 0;
+}
+
+.faq-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    opacity: 0.5;
+    background-size: cover;
+    mix-blend-mode: hard-light;
+    filter: contrast(200%);
+    z-index: 1;
+}
+
+.faq-main {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    max-width: 1500px;
+    margin: 0  7rem;
+    padding: 50px 0;
+}
+
+.faq-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.faq-questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.faq-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq-question {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 40%;
+    font-size: 1.5rem;
+}
+
+.question-title {
+    color: #05F4F9;
+    font-weight: 600;
+}
+
+.question-answer {
+    color: white;
+}
+
 /* Style do footer */
 .footer {
     display: flex;
@@ -1307,6 +1391,32 @@ input[type="checkbox"] {
 }
 /* Koniec footera */
 
+/* Media large */
+@media(max-width: 1200px) {
+    .logo-container {
+        display: none;
+    }
+
+    .big-cta-terminal .terminal-content {
+        justify-content: unset;
+    }
+
+    .info-form-container {
+        margin-right: 7rem;
+        width: 100%;
+    }
+    
+    .faq-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .faq-question {
+        width: 100%;
+    }
+}
+
+/* Media mobilny */
 @media(max-width: 768px) {
     .right-header {
         margin: 0;
@@ -1317,19 +1427,19 @@ input[type="checkbox"] {
 
     .tiles-column .blue-stripe {
         width: 1vw;
-        top: -100vw;
+        top: -155vw;
         left: -0.5vw;
     }
 
     .tiles-column .purple-stripe {
-        width: 1.3vw;
-        top: -138vw;
+        width: 1vw;
+        top: -175vw;
         left: unset;
-        right: 2.5vw;
+        right: 2vw;
     }
 
     .tiles-column {
-        gap: 8vw;
+        gap: 22vw;
     }
 
     .left-tiles-column {
@@ -1348,6 +1458,12 @@ input[type="checkbox"] {
     .tile-wrapper .tile-text{
         padding-left: 2vw;
         font-size: 4vw;
+        top: 31vw;
+    }
+
+    .right-tiles-column .tile-text {
+        padding-left: 0;
+        padding-right: 3vw;
     }
 
     .tiles-column .tile-wrapper {
@@ -1422,7 +1538,7 @@ input[type="checkbox"] {
     }
 
     .left-header .heading-text {
-        padding-top: 15vw;
+        padding-top: 4vw;
     }
 
     .left-header {
@@ -1448,9 +1564,10 @@ input[type="checkbox"] {
     }
 
     .video-container {
-        margin-top: 25vw;
-        margin-left: 10vw;
-        margin-right: 10vw;
+        width: unset;
+        margin-left: 8vw;
+        margin-right: 8vw;
+        margin-top: 45vw;
     }
 
     .beGOAT-graffiti-container .gradient-container {
@@ -1487,6 +1604,8 @@ input[type="checkbox"] {
     .gaming-essence-container .mobile {
         display: block;
         margin: 0 8vw;
+        width: 100%;
+        height: auto;
     }
 
     .gaming-essence-container .essence-text-container .text-columns-container {
@@ -1510,9 +1629,10 @@ input[type="checkbox"] {
     }
 
     .gaming-essence-container .sofa-characters {
-        width: 79vw;
-        left: 11.5vw;
-        bottom: 5vw;
+        width: 60vw;
+        left: 20.5vw;
+        top: 112vw;
+        /* bottom: 5vw; */
     }
 
     .terminal2 {
@@ -1619,8 +1739,8 @@ input[type="checkbox"] {
     }
 
     .challanges-image {
-        width: 52vw;
-        right: -35vw;
+        width: 70vw;
+        right: -45vw;
     }
 
     .challanges-main .desktop {
@@ -1686,5 +1806,26 @@ input[type="checkbox"] {
 
     .info-form-container .form input,  .info-form-container .form button{
         width: 100%;
+    }
+
+    .faq-main {
+        margin: 8vw 8vw;
+        padding: 0;
+    }
+
+    .faq-title {
+        font-size: 7vw;
+    }
+
+    .question-title {
+        font-size: 5vw;
+    }
+
+    .question-answer {
+        font-size: 4vw;
+    }
+
+    .faq-row, .faq-questions-container {
+        gap: 5vw;
     }
 }
