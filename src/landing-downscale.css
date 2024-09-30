@@ -413,6 +413,7 @@ input[type="checkbox"] {
 }
 
 .logo-animation {
+    width: 200px;
     font-family: 'Cousine';
     user-select: none;
     color: white;
@@ -1393,6 +1394,46 @@ input[type="checkbox"] {
 
 /* Media large */
 @media(max-width: 1200px) {
+    .left-header {
+        width: 35%;
+    }
+    
+    .heading-text {
+        padding-top: 10rem;
+    }
+
+    .heading-text span {
+        font-size: 4rem;
+    }
+
+    .autotype-bg {
+        height: 4rem;
+        width: 22rem;
+        top: 0.5rem;
+    }
+
+    .right-header {
+        width: 35%;
+        gap: 40px;
+    }
+
+    .terminal1 {
+        width: 80%;
+    }
+
+    .logo-animation-container {
+        width: 80%;
+    }
+
+    .custom-tile {
+        width: 180px;
+        height: 221px;
+    }
+
+    .tile-wrapper {
+        width: 180px;
+    }
+
     .logo-container {
         display: none;
     }
