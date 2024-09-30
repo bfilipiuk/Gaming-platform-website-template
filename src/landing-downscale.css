@@ -1160,22 +1160,15 @@ input[type="checkbox"] {
     flex-shrink:initial;
 }
 
-.big-cta-terminal .terminal-content .logo-container{
-    padding: 50px;
-}
-
-.big-cta-terminal .terminal-content .logo-container img{
-    width: 400px;
-    height: auto;
-}
-
 .info-form-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 7rem;
     margin-right: auto;
-    width: 40%;
+    width: 30%;
+    /* height: 500px; */
+    height: auto;
 }
 
 .info-form-container .form {
@@ -1213,6 +1206,21 @@ input[type="checkbox"] {
 
 .info-form-container .form input,  .info-form-container .form button{
     width: 230px;
+}
+
+.big-cta-terminal .terminal-content .logo-container{
+    padding: 0 50px;
+    width: 600px;
+}
+
+.logo-animation-cta {
+    font-family: 'Cousine';
+    user-select: none;
+    color: white;
+    font-size: 0.5rem;
+    /* line-height: 12.81px; */
+    letter-spacing: 0.7px;
+    transform: translateX(10%);
 }
 /* Koniec duzego terminal cta */
 

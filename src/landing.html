@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="logo-animation-container">
-                        <pre class="logo-animation" id="ascii-art">
+                        <pre class="logo-animation" id="ascii-art-1">
 
       @@                                                                            @      
       %%                                                                           %@      
@@ -414,61 +414,61 @@
                     </div>
                 </div>
                 <div class="logo-container">
-                    <img src="/public/logo-ascii.svg">
-                    <!-- <pre class="logo-animation" id="ascii-art">
+                    <!-- <img src="/public/logo-ascii.svg"> -->
+                    <pre class="logo-animation-cta" id="ascii-art-2">
 
-                        @@                                                                            @      
-                        %%                                                                           %@      
-                        %%                                                                           %%      
-                        %%                                                                           %%      
-                        %%                                                                           %%      
-                        %%@                                                                         @%%      
-                        %%%                                                                         %%%      
-                        %%%@                                                                       %%%%      
-                        %%%%                                                                       %%%%      
-                        %%%%%                                                                     %%%%%      
-                        %%%%%                                                                     %%%%%      
-                        %%%%%%%                                                                  %%%%%%      
-                        %%%%%##                                                                 ##%%%%%      
-                         %%%##**                                                               **##%%%       
-                         %%##***+                                                             +***##%%       
-                          ##***+++=                                                         ++++***##        
-                           #**+++===                                                       ===+++***         
-                           **+++======                                                  =======+++**         
-                            +++=========                                              -=========++*          
-                             +===========-=                                        ---==========++           
-                               =========------=                               ---------=========             
-                                ========----------                         ------------========              
-                                  =====--------------::                :::--------------=====                
-                                    ===-------------::::::          :::::::-------------===                  
-                                      =-------------::::::::      :::::::::-------------=                    
-                                         -----------::::::::::   .:::::::::-----------                       
-                                           ---------::::::::::: :::::::::::---------                         
-                                              -------:::::::::::::::::::::-------                            
-                                                ------:::::::::::::::::::------                              
-                                                  -----:::::::::::::::::-----                                
-                                                    ------:::::::::::------                                  
-                                                      -------------------                                    
-                                                       -----------------                                     
-                                    ==                  ---------------                  ==                  
-                                    ====                  -----------                  ====                  
-                                    ======                 ---------                 ======                  
-                                     ======                 -------                 ======                   
-                                     +=======               -------               =======+                   
-                                      ++========             -====             ========++                    
-                                       +++========            ===            ========+++*                    
-                                       +++++=======           ===           =======+++++                     
-                                        **+++++=====           ==          =====+++++**                      
-                                         ****++++++==          +          ==++++++****                       
-                                          ##*****+++++                   +++++*****##                        
-                                           ####********                 ********####                         
-                                             %######***                 ***#######                           
-                                              %%%%%#####               #####%%%%%                            
-                                                %%%%%%%%               %%%%%%%%                              
-                                                  %%%%%%               %%%%%%                                
-                                                     %%%               %%%                                   
-                  
-                    </pre> -->
+      @@                                                                            @      
+      %%                                                                           %@      
+      %%                                                                           %%      
+      %%                                                                           %%      
+      %%                                                                           %%      
+      %%@                                                                         @%%      
+      %%%                                                                         %%%      
+      %%%@                                                                       %%%%      
+      %%%%                                                                       %%%%      
+      %%%%%                                                                     %%%%%      
+      %%%%%                                                                     %%%%%      
+      %%%%%%%                                                                  %%%%%%      
+      %%%%%##                                                                 ##%%%%%      
+       %%%##**                                                               **##%%%       
+       %%##***+                                                             +***##%%       
+        ##***+++=                                                         ++++***##        
+         #**+++===                                                       ===+++***         
+         **+++======                                                  =======+++**         
+          +++=========                                              -=========++*          
+           +===========-=                                        ---==========++           
+             =========------=                               ---------=========             
+              ========----------                         ------------========              
+                =====--------------::                :::--------------=====                
+                  ===-------------::::::          :::::::-------------===                  
+                    =-------------::::::::      :::::::::-------------=                    
+                       -----------::::::::::   .:::::::::-----------                       
+                         ---------::::::::::: :::::::::::---------                         
+                            -------:::::::::::::::::::::-------                            
+                              ------:::::::::::::::::::------                              
+                                -----:::::::::::::::::-----                                
+                                  ------:::::::::::------                                  
+                                    -------------------                                    
+                                     -----------------                                     
+                  ==                  ---------------                  ==                  
+                  ====                  -----------                  ====                  
+                  ======                 ---------                 ======                  
+                   ======                 -------                 ======                   
+                   +=======               -------               =======+                   
+                    ++========             -====             ========++                    
+                     +++========            ===            ========+++*                    
+                     +++++=======           ===           =======+++++                     
+                      **+++++=====           ==          =====+++++**                      
+                       ****++++++==          +          ==++++++****                       
+                        ##*****+++++                   +++++*****##                        
+                         ####********                 ********####                         
+                           %######***                 ***#######                           
+                            %%%%%#####               #####%%%%%                            
+                              %%%%%%%%               %%%%%%%%                              
+                                %%%%%%               %%%%%%                                
+                                   %%%               %%%                                   
+                                         
+                    </pre>
                 </div>
             </div>
         </div>
@@ -567,7 +567,7 @@
     </script>
 
     <!-- glitchowanie ascii -->
-    <script>
+    <!-- <script>
         const originalAscii = document.getElementById('ascii-art').textContent.split('\n');
             
         function getRandomChar() {
@@ -602,6 +602,56 @@
             
         // Co ile uruchomienie
         setInterval(glitchAscii, 400);  
-    </script>
+    </script> -->
+    <script>
+        const asciiElements = [
+            {
+                element: document.getElementById('ascii-art-1'),
+                original: document.getElementById('ascii-art-1').textContent.split('\n')
+            },
+            {
+                element: document.getElementById('ascii-art-2'),
+                original: document.getElementById('ascii-art-2').textContent.split('\n')
+            }
+        ];
+    
+        function getRandomChar() {
+            const chars = '▒ ▓';
+            return chars[Math.floor(Math.random() * chars.length)];
+        }
+    
+        function glitchAscii(asciiObj) {
+            const { element, original } = asciiObj;
+            const lines = element.textContent.split('\n');
+            
+            const randomLineIndex = Math.floor(Math.random() * lines.length);
+            let randomLine = lines[randomLineIndex];
+            
+            const start = Math.floor(Math.random() * randomLine.length);
+            const length = Math.floor(Math.random() * 25) + 10; // Szerokość wiersza
+            
+            let newLine = randomLine.split('');
+            for (let i = start; i < Math.min(start + length, randomLine.length); i++) {
+                newLine[i] = getRandomChar();
+            }
+    
+            lines[randomLineIndex] = newLine.join('');
+            element.textContent = lines.join('\n');
+            
+            setTimeout(() => {
+                lines[randomLineIndex] = original[randomLineIndex];
+                element.textContent = lines.join('\n');
+            }, 1000); // Czas trwania glitcha
+        }
+    
+        function triggerGlitch() {
+            asciiElements.forEach(asciiObj => {
+                glitchAscii(asciiObj);
+            });
+        }
+    
+        // Co ile uruchomienie glitcha
+        setInterval(triggerGlitch, 400);  
+    </script>    
 </body>
 </html>
