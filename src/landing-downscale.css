@@ -1430,7 +1430,6 @@ input[type="checkbox"] {
     }
 
     .right-header {
-        /* width: 35%; */
         margin-right: 5rem;
         gap: 40px;
     }
@@ -1445,8 +1444,16 @@ input[type="checkbox"] {
     }
 
     .terminal-content .input {
-        width: 225px;
+        width: 170px;
         border: 2px solid white;
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+
+    .terminal-content .button {
+        width: 170px;
+        border: 2px solid #05F4F9;
+        border-style: none none solid none;
         padding: 4px 6px;
         font-size: 0.8rem;
     }
@@ -1493,15 +1500,7 @@ input[type="checkbox"] {
         top: 15%;
         opacity: 0;
     }
-      
-    .terminal-content .button {
-        width: 225px;
-        border: 2px solid #05F4F9;
-        border-style: none none solid none;
-        padding: 4px 6px;
-        font-size: 0.8rem;
-    }
-
+    
     .logo-animation-container {
         width: 80%;
     }
@@ -1724,7 +1723,77 @@ input[type="checkbox"] {
     }
 }
 
-/* Media mobilny */
+/* Media medium */
+@media(max-width: 992px) {
+    .heading-text span {
+        font-size: 3rem;
+    }
+
+    .autotype-bg {
+        height: 3rem;
+        width: 17rem;
+        top: 1.05rem;
+    }
+
+    .left-header {
+        width: 33%;
+    }
+
+    .right-header {
+        margin-right: 5rem;
+        gap: 35px;
+    }
+
+    .tiles-column {
+        gap: 110px;
+    }
+
+    .custom-tile {
+        width: 150px;
+        height: 184px;
+    }
+
+    .tile-wrapper {
+        width: 150px;
+    }
+
+    .tile-text {
+        font-size: 1.1rem;
+        top: 195px;
+    }
+
+    .blue-stripe {
+        width: 6px;
+    }
+
+    .purple-stripe {
+        width: 6px;
+    }
+
+    .logo-animation {
+        transform: translateX(1%);
+    }
+
+    .terminal2 {
+        top: -370px;
+    }
+
+    .challanges-main .desktop {
+        display: none;
+    }
+
+    .challanges-img-container {
+        width: 400px;
+    }
+
+    .challanges-main .mobile {
+        display: block;
+        width: 500px;
+        right: -50px;
+    }
+}
+
+/* Media small (mobilne) */
 @media(max-width: 768px) {
     .right-header {
         margin: 0;
@@ -1862,9 +1931,10 @@ input[type="checkbox"] {
         height: 11vw;
     }
 
-    .autotype-container .autotype-bg {
-        height: 10vw;
+    .autotype-bg {
+        height: 9.5vw;
         width: 50vw;
+        top: 0;
     }
 
     .autotype-line {
@@ -2046,17 +2116,14 @@ input[type="checkbox"] {
         left: -40vw;
     }
 
-    .challanges-image {
-        width: 70vw;
-        right: -45vw;
-    }
-
     .challanges-main .desktop {
         display: none;
     }    
 
     .challanges-main .mobile {
         display: block;
+        width: 70vw;
+        right: -45vw;
     }
 
     .rewards-image {
