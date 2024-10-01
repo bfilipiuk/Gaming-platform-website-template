@@ -1,0 +1,1651 @@
+body {
+    background-color: black;
+    font-family: "Rajdhani", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+
+    /* Zmienne do ramek */
+    --x1: 25px;
+    --x2: 55px;
+    --x3: 60px;
+    --x4: 5px;
+    --x5: 10px;
+    --x6: 25px;
+    --y1: 5px;
+    --y2: 20px;
+    --y3: 50px;
+    --y4: 55px;
+    --y5: 105px;
+    --y6: 115px;
+    --y7: 85px;
+    --y8: 75px;
+    --y9: 15px;
+
+    --outline-width: 2px;
+}
+
+/* Style do ramek */
+.custom-tile {
+    width: 342px;
+    height: 422px;
+    position: relative;
+}
+
+.custom-tile .custom-tile-shadow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    z-index: -1;
+    background-color: #8400FF;
+    box-shadow: #8400FF -10px 10px 90px 20px;
+}
+
+.custom-tile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(48, 237, 243);
+    left: var(--outline-width);
+    top: var(--outline-width);
+    width: calc(100% - 2 * var(--outline-width));
+    height: calc(100% - 2 * var(--outline-width));
+    clip-path: polygon(var(--x4) var(--y2),
+            var(--x1) 0,
+            var(--x2) 0,
+            var(--x3) var(--y1),
+            calc(100% - var(--x3)) var(--y1),
+            calc(100% - var(--x2)) 0,
+            calc(100% - var(--x1)) 0,
+            calc(100% - var(--x4)) var(--y2),
+            calc(100% - var(--x4)) var(--y3),
+            calc(100% - var(--x5)) var(--y4),
+            calc(100% - var(--x5)) var(--y5),
+            100% var(--y6),
+            100% calc(100% - var(--y7)),
+            calc(100% - var(--x5)) calc(100% - var(--y8)),
+            calc(100% - var(--x5)) calc(100% - var(--y9)),
+            calc(100% - var(--x6)) 100%,
+            var(--x6) 100%,
+            var(--x5) calc(100% - var(--y9)),
+            var(--x5) calc(100% - var(--y8)),
+            0 calc(100% - var(--y7)),
+            0 var(--y6),
+            var(--x5) var(--y5),
+            var(--x5) var(--y4),
+            var(--x4) var(--y3));
+}
+
+.custom-tile-content img {
+    height: 100%;
+}
+
+.no-cheaters-tile img {
+    height: auto;
+    width: 100%;
+}
+
+.custom-tile-outline {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(93, 0, 255);
+    clip-path: polygon(var(--x1) 0,
+            calc(var(--x2) + 2*var(--outline-width)) 0,
+            calc(var(--x3) + 2*var(--outline-width)) var(--y1),
+            calc(100% - var(--x3) - 2*var(--outline-width)) var(--y1),
+            calc(100% - var(--x2) - 2*var(--outline-width)) 0,
+            calc(100% - var(--x1)) 0,
+            calc(100% - var(--x4)) var(--y2),
+            calc(100% - var(--x4)) calc(var(--y3) + 2*var(--outline-width)),
+            calc(100% - var(--x5)) calc(var(--y4) + 2*var(--outline-width)),
+            calc(100% - var(--x5)) var(--y5),
+            100% var(--y6),
+            100% calc(100% - var(--y7)),
+            calc(100% - var(--x5)) calc(100% - var(--y8)),
+            calc(100% - var(--x5)) calc(100% - var(--y9)),
+            calc(100% - var(--x6)) 100%,
+            var(--x6) 100%,
+            var(--x5) calc(100% - var(--y9)),
+            var(--x5) calc(100% - var(--y8)),
+            0 calc(100% - var(--y7)),
+            0 var(--y6),
+            var(--x5) var(--y5),
+            var(--x5) calc(var(--y4) + 2*var(--outline-width)),
+            var(--x4) calc(var(--y3) + 2*var(--outline-width)),
+            var(--x4) var(--y2));
+}
+
+.tiles-column {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.tile-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 355px;
+}
+
+.tile-wrapper .tile-text {
+    padding-left: 1rem;
+}
+
+.tile-text {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+}
+
+.tile-text .highlight {
+    color: #05F4F9;
+}
+
+.right-tiles-column {
+    position: relative;
+    padding-top: 8rem;
+}
+
+.left-tiles-column {
+    position: relative;
+    padding-top: 16rem;
+}
+
+.left-tiles-column .blue-stripe {
+    width: 9px;
+    position: absolute;
+    left: -0.2rem;
+    top: -30rem;
+}
+
+.right-tiles-column .purple-stripe {
+    position: absolute;
+    width: 11px;
+    left: -0.1rem;
+    top: -38rem;
+}
+
+.tiles-column .mobile {
+    display: none;
+}
+/* Koniec stylowania ramek */
+
+/* Style navbar */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    /* max-width: 500px; */
+    height: 70px;
+}
+
+.navbar .logo {
+    margin-left: 7rem;
+    height: 80%;
+    width: auto;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 2.5rem;
+}
+
+.navbar ul li {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    padding: 0 1.5rem;
+}
+
+.tgl-btn {
+    display: none;
+    margin-right: 2.5rem;
+}
+
+.tgl-btn .tgl-icon {
+    width: 2.5rem;
+    height: auto;
+}
+
+/* Style header */
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 30vw;
+    background:
+        url('/public/backgrounds/dots-bg-top.svg') no-repeat top center,
+        url('/public/backgrounds/dots-bg.svg') center top;
+    background-size: 100% auto, 100% auto;
+}
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 2100px;
+}
+
+.header-columns-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.right-header {
+    /* width: 800px;
+    height: 800px; */
+    /* border: 1px solid white; */
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    /* width: 49%; */
+}
+
+.left-header {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    width: 40%;
+    margin-left: 7rem;
+}
+
+.left-header .heading-text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 19rem;
+}
+
+.left-header .heading-text span {
+    color: white;
+    font-size: 8rem;
+    font-weight: 500;
+}
+
+.autotype-bg {
+    position: absolute;
+    transform: translateY(0.85rem);
+    background-color: #8400FF;
+    box-shadow: 0px 0px 100px 10px #8400FF;
+    width: 45rem;
+    height: 8rem;
+}
+
+.left-header .heading-text .autotype {
+    position: relative;
+    line-height: 7rem;
+    padding: 0px 10px;
+    padding-top: 5px;
+}
+
+.left-header .heading-text span .gamers-highlight {
+    color: #05F4F9;
+    font-weight: 600;
+}
+
+/* Style terminal cta */
+.cta-terminal-wrapper {
+    border: 1px solid white;
+    margin-top: 8rem;
+    font-family: 'Consolas';
+}
+
+.terminal1 {
+    width: 100%;
+}
+
+.terminal-navbar {
+    display: flex;
+    justify-content: end;
+    background-color: #505050;
+    position: relative;
+}
+
+.terminal-navbar .buttons {
+    padding: 15px 10px;
+}
+
+.terminal-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 8px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+}
+
+.terminal-card .icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.terminal1 .terminal-content, .terminal2 .terminal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding: 20px 35px;
+    padding-bottom: 35px;
+    background-color: #0C0C0C;
+}
+
+.terminal-content .begoat-terminal-text {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.agreement-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* !style do checkboxa! */
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.checkboxOverride {
+    position: relative;
+    width: 16px;
+}
+
+.checkboxOverride input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.checkboxOverride label {
+    background: none repeat scroll 0 0 #000000;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+  
+.checkboxOverride label:after {
+    color: #05F4F9;
+    border-style: none none solid solid;
+    content: "";
+    height: 30%;
+    width: 60%;
+    left: 15%;
+    top: 20%;
+    opacity: 0;
+    position: absolute;
+    -ms-transform:rotate(-45deg); /* IE 9 */
+    -webkit-transform:rotate(-45deg); /* Safari and Chrome */
+    transform:rotate(-45deg);
+}
+/* !koniec style do checkboxa! */
+
+.terminal-content .input {
+    width: 19rem;
+    color: #05F4F9;
+    background-color: black;
+    outline: none;
+    border: 2px solid white;
+    padding: 8px;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.terminal-content .input::placeholder {
+    color: #05F4F9;
+}
+
+.terminal-content .input:focus {
+    border: 2px solid #05F4F9;
+}
+
+.terminal-content .button {
+    width: 19rem;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 4px solid #05F4F9;
+    border-style: none none solid none;
+    padding: 8px;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* style do animacja logo */
+.logo-animation-container {
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.logo-animation-container img {
+    width: 80%;
+}
+
+/* style do video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    width: auto;
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.video-frame {
+    width: 100%;
+    /* margin: 0 7rem; */
+}
+
+/* style do graffiti */
+.beGOAT-graffiti-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20vw;
+}
+
+.gradient-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.beGOAT-graffiti {
+    z-index: 2;
+    width: 110vw;
+    max-width: 2200px;
+    height: auto;
+    position: relative;
+}
+
+/* tło do about i esencji */
+.about-gaming-wrapper {
+    position: relative;
+    /* overflow-x: hidden; */
+    padding-top: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-gaming-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background-image: url(/public/textures/scratches-texture.png);
+    background-size: cover;
+    mix-blend-mode: hard-light;
+    filter: contrast(150%);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+/* style do about */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    color: white;
+    margin-top: 8rem;
+    width: 100%;
+    max-width: 1900px;
+    z-index: 1;
+}
+
+.logo-text {
+    position: relative;
+    z-index: 1;
+}
+
+.about-title {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.about-text {
+    width: 80%;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+}
+
+.about-text .be, .about-text .zmieniamy-zasady-gry {
+    color: #05F4F9;
+}
+
+.about-text .goat, .about-text .bez-kompromisow {
+    color: #8400FF;
+}
+
+/* Style do esencji gamingu */
+.gaming-essence-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35rem;
+    position: relative;
+    padding-bottom: 7rem;
+    width: 100%;
+    max-width: 2100px;
+    /* margin: 7rem 0; */
+}
+
+.gaming-essence-container .purple-frame {
+    width: 86vw;
+    max-width: 2100px;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    z-index: 1;
+    /* margin: 0 7rem; */
+}
+
+.terminal2 {
+    position: absolute;
+    width: 800px;
+    top: -30.5vw;
+    top: -37rem;
+    z-index: 2;
+}
+
+.gaming-essence-container .mobile {
+    display: none;
+}
+
+.gaming-essence-container .essence-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: white;
+    margin-top: 3vw;
+    z-index: 2;
+}
+
+.gaming-essence-container .title {
+    font-size: 4.15vw;
+    font-weight: 500;
+}
+
+.gaming-essence-container .essence-text-container .esencja-gamingu {
+    background-color: #8400FF;
+}
+
+.gaming-essence-container .essence-text-container .nowej-odslonie {
+    color: #05F4F9;
+    font-weight: 600;
+}
+
+.essence-text-container .text-columns-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.essence-text-container .text-columns-container .column {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 24vw;
+}
+
+.essence-text-container .text-columns-container .column .header {
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #05F4F9;
+}
+
+.essence-text-container .text-columns-container .column .text {
+    font-size: 2.07vw;
+    font-weight: 400;
+}
+
+.gaming-essence-container .sofa-characters {
+    position: absolute;
+    width: 85vw;
+    max-width: 1900px;
+    bottom: 2.6vw;
+    left: 9vw;
+    z-index: 2;
+}
+
+/* Style do sekcji fav games*/
+.fav-games-section {
+    position: relative;
+    width: 100%;
+    min-height: 985px;
+    display: flex;
+    justify-content: center;
+}
+
+.fav-games-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(45deg, #05F4F9 20%, #8400FF 110%);
+    z-index: 0;
+}
+
+.fav-games-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    opacity: 0.7;
+    background-size: cover;
+    mix-blend-mode: lighten;
+    filter: contrast(500%);
+    z-index: 1;
+}
+
+.fav-games-main, .challanges-main {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+    /* border: 1px solid white; */
+}
+
+.games-text-container {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4vw; */
+    gap: 60px;
+    width: 64%;
+}
+
+.games-header {
+    color: white;
+    /* font-size: 80px; */
+    /* font-size: 3.5vw; */
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.games-header .ulubione-gry {
+    background-color: #8400FF;
+    padding: 0px 10px;
+    margin: -5px;
+}
+
+.games-text {
+    /* font-size: 48px; */
+    font-size: 3rem;
+    /* font-size: 2.2vw; */
+    font-weight: 500;
+    color: #000000;
+}
+
+.fav-games-image {
+    position: absolute;
+    transform: scaleX(-1);
+    bottom: 0;
+    right: -30rem;
+    /* right: -35vw; */
+    width: 1050px;
+    /* max-width: 945px; */
+    height: auto;
+    z-index: 3;
+}
+
+/* Style do sekcji challanges */
+.challanges-section {
+    position: relative;
+    width: 100%;
+    min-height: 985px;
+    display: flex;
+    justify-content: center;
+}
+
+.challanges-main {
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
+.challanges-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    /* background-image: linear-gradient(45deg, #05F4F9 20%, #8400FF 110%); */
+    z-index: 0;
+}
+
+.challanges-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    background-size: cover;
+    mix-blend-mode: hard-light;
+    filter: contrast(150%);
+    z-index: 1;
+}
+
+.challanges-text-container {
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 35%;
+}
+
+.challanges-header {
+    color: white;
+    /* font-size: 80px; */
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.challanges-header .header-highlight {
+    background-color: #8400FF;
+    padding: 0px 10px;
+    margin: -5px;
+}
+
+.challanges-text {
+    /* font-size: 48px; */
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+}
+
+.challanges-main .mobile {
+    display: none;
+}
+
+.challanges-image {
+    position: absolute;
+    bottom: 0;
+    left: 7rem;
+    width: 850px;
+    /* max-width: 750px; */
+    /* width: 40rem; */
+    height: auto;
+    z-index: 3;
+}
+
+/* Style do sekcji rewards*/
+.rewards-section {
+    position: relative;
+    width: 100%;
+    min-height: 985px;
+    display: flex;
+    justify-content: center;
+}
+
+.rewards-main {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
+.rewards-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: #383838;
+    z-index: 0;
+}
+
+.rewards-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    background-size: 110% 180%;
+    opacity: 0.5;
+    mix-blend-mode: lighten;
+    filter: contrast(1000%);
+    z-index: 1;
+}
+
+.rewards-text-container {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 40%;
+}
+
+.rewards-header {
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.rewards-header .wyplacaj {
+    background-color: #8400FF;
+    padding: 0px 10px;
+}
+
+.rewards-text {
+    /* font-size: 48px; */
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.rewards-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7rem;
+    width: 850px;
+    height: auto;
+    z-index: 3;
+}
+
+/* style do tournaments */
+.tournaments-section {
+    position: relative;
+    width: 100%;
+    min-height: 985px;
+    display: flex;
+    justify-content: center;
+}
+
+.tournaments-main {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
+
+.tournaments-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(45deg, #8400FF 0%, #05F4F9 75%);
+    z-index: 0;
+}
+
+.tournaments-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    opacity: 0.7;
+    background-size: cover;
+    mix-blend-mode: lighten;
+    filter: contrast(500%);
+    z-index: 1;
+}
+
+.tournaments-text-container {
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 65%;
+}
+
+.tournaments-header {
+    color: white;
+    /* font-size: 80px; */
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.tournaments-header .header-highlight {
+    background-color: #8400FF;
+    padding: 0px 10px;
+    margin: -5px;
+}
+
+.tournaments-text {
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.tournaments-image {
+    position: absolute;
+    bottom: 0;
+    left: -5rem;
+    width: 540px;
+    /* max-width: 490px; */
+    height: auto;
+    z-index: 3;
+}
+
+/* Style do sekcji account*/
+.account-section {
+    position: relative;
+    width: 100%;
+    min-height: 985px;
+    display: flex;
+    justify-content: center;
+}
+
+.account-main {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    max-width: 2100px;
+    position: relative;
+}
+
+
+.account-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    /* background-image: linear-gradient(45deg, #05F4F9 20%, #8400FF 110%); */
+    z-index: 0;
+}
+
+.account-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/public/textures/scratches-texture.png');
+    opacity: 0.7;
+    background-size: cover;
+    mix-blend-mode: hard-light;
+    filter: contrast(200%);
+    z-index: 1;
+}
+
+.account-text-container {
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 7rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 60%;
+}
+
+.account-header {
+    color: white;
+    /* font-size: 80px; */
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.account-header .jedno-konto {
+    background-color: #8400FF;
+    padding: 0px 10px;
+}
+
+.account-text {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.account-text .be, .account-text .goat {
+    font-weight: 600;
+}
+
+.account-text .be {
+    color: #05F4F9;
+}
+
+.account-text .goat {
+    color: #8400FF;
+}
+
+.account-image {
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    right: -20rem;
+    /* width: 40vw; */
+    width: 910px;
+    /* max-width: 800px; */
+    height: auto;
+    z-index: 3;
+}
+
+/* Style do footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #05F4F9;
+    border-left: none;
+    border-right: none;
+
+    /* tło działa git, ale psure performance ?? może sie polepszy jak będzie import z png */
+    /* background-image: url('/public/backgrounds/footer-bg.svg');
+    background-size: cover;
+    background-position: center; */
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 2100px;
+}
+
+.company-info, .useful-links, .contact {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.company-info {
+    margin-left: 7rem;
+}
+
+.contact {
+    margin-right: 7rem;
+}
+
+.company-info img {
+    width: 14rem;
+    margin-bottom: 1rem;
+}
+
+.company-info span {
+    margin-bottom: 0.5rem;
+}
+
+.useful-links span {
+    font-weight: 600;
+    margin-bottom: 1.7rem;
+}
+
+.useful-links a {
+    margin-bottom: 0.5rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.contact span {
+    font-weight: 600;
+    margin-bottom: 1.7rem;
+}
+
+.contact button {
+    margin-bottom: 1rem;
+}
+
+.contact .contact-btn {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 4px solid #05F4F9;
+    border-style: none none solid none;
+    padding: 8px;
+    font-family: 'Rajdhani';
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Style do big cta terminal */
+.big-cta-terminal {
+    border: 1px solid white;
+    font-family: 'Consolas';
+    overflow-x: hidden;
+}
+
+.big-cta-terminal .terminal-navbar {
+    display: flex;
+    justify-content: end;
+    background-color: #505050;
+    position: relative;
+}
+
+.big-cta-terminal .terminal-navbar .buttons {
+    padding: 10px 10px;
+}
+
+.big-cta-terminal .terminal-navbar .terminal-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 4px 8px;
+    background-color: #0C0C0C;
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+}
+
+.big-cta-terminal .terminal-navbar .terminal-card .icon-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.big-cta-terminal .terminal-main {
+    display: flex;
+    justify-content: center;
+    background-color: #0C0C0C;
+}
+
+.big-cta-terminal .terminal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 2100px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    color: white;
+}
+
+.big-cta-terminal .terminal-content .logo-container{
+    /* width: 200px; */
+    /* margin-right: 8rem; */
+    padding: 50px;
+}
+
+.big-cta-terminal .terminal-content .logo-container img{
+    width: 30rem;
+    height: auto;
+}
+
+.info-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 7rem;
+    width: 40%;
+}
+
+.info-form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-form-container .form input,  .info-form-container .form button{
+    width: 18rem;
+}
+
+@media(max-width: 1850px) {
+    .rewards-image {
+        right: 5vw;
+    }
+}
+
+/*! Media queries !*/
+@media(max-width: 1841px) {
+    .left-header .heading-text span {
+        font-size: 6rem;
+    }
+
+    .autotype-bg {
+        width: 34rem;
+        height: 6rem;
+    }
+
+    .left-header {
+        width: 33%;
+    }
+    
+}
+
+@media(max-width: 768px) {
+    .header-columns-container {
+        /* display: flex;
+        justify-content: center; */
+    }
+    
+    .right-header {
+        margin: 0;
+        width: 100%;
+        /* gap: 10vw; */
+        /* display: flex; */
+        justify-content: space-between;
+        margin: 0 8vw;
+    }
+
+    .tiles-column .blue-stripe {
+        width: 1vw;
+        top: -100vw;
+        left: -0.5vw;
+    }
+
+    .tiles-column .purple-stripe {
+        width: 1.3vw;
+        top: -138vw;
+        left: -0.5vw;
+    }
+
+    .tiles-column {
+        gap: 8vw;
+    }
+
+    .left-tiles-column {
+        padding-top: 30vw;
+    }   
+    
+    .right-tiles-column {
+        padding-top: 10vw;
+    }
+
+    .tile-wrapper .custom-tile {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .tile-wrapper .tile-text{
+        padding-left: 2vw;
+        font-size: 4vw;
+    }
+
+    .tiles-column .tile-wrapper {
+        width: 32vw;
+        gap: 2vw;
+    }
+
+    .custom-tile img {
+        width: 100%;
+        height: auto;
+    }
+
+    .tiles-column .mobile {
+        display: block;
+    }
+
+    .tiles-column .desktop {
+        display: none;
+    }
+
+    .navbar  ul, .terminal1, .logo-animation-container, .logo-animation {
+        display: none;
+    }
+
+    .tgl-btn {
+        display: block;
+    }
+
+    .navbar {
+        margin-top: min(30px, 4vw);
+    }
+
+    .navbar .logo {
+        margin-left: 10vw;
+        height: 7vw;
+        max-height: 50px;
+    }
+
+    .navbar .tgl-btn {
+        margin-right: 5vw;
+        width: 7vw;
+    }
+
+    .navbar .tgl-btn .tgl-icon {
+        margin-right: 5vw;
+        width: 6vw;
+    }
+
+    .custom-tile {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .tile-wrapper {
+        width: 41vw;
+    }
+
+    .left-header .heading-text {
+        padding-top: 15vw;
+    }
+
+    .left-header {
+        width: 100%;
+        margin: 0 10vw;
+    }
+
+    .left-header .heading-text span {
+        font-size: 9vw;
+    }
+
+    .autotype-container {
+        height: 15vw;
+    }
+
+    .autotype-container .autotype-bg {
+        height: 10vw;
+        width: 55vw;
+    }
+
+    .video-container {
+        margin-top: 25vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .beGOAT-graffiti-container .gradient-container {
+        height: 20vw;
+    }
+
+    .about-container {
+        gap: 8vw;
+        margin-top: 15vw;
+    }
+
+    .logo-text .logo-sygnet {
+        width: 17vw;
+        height: auto;
+    }
+
+    .logo-text .about-title {
+        font-size: 7vw;
+    }
+
+    .about-text {
+        font-size: 4vw;
+    }
+
+    .gaming-essence-container {
+        margin-top: 15vw;
+        padding-bottom: 8vw;
+    }
+
+    .gaming-essence-container .desktop {
+        display: none;
+    }
+
+    .gaming-essence-container .mobile {
+        display: block;
+        margin: 0 8vw;
+    }
+
+    .gaming-essence-container .essence-text-container .text-columns-container {
+        flex-direction: column;
+    }
+
+    .essence-text-container .text-columns-container .column {
+        width: 76vw;
+    }
+
+    .gaming-essence-container .essence-text-container .title {
+        font-size: 4.5vw
+    }
+
+    .essence-text-container .text-columns-container .column .header {
+        font-size: 4.4vw;
+    }
+
+    .essence-text-container .text-columns-container .column .text {
+        font-size: 4.4vw;
+    }
+
+    .gaming-essence-container .sofa-characters {
+        width: 79vw;
+        left: 11.5vw;
+        bottom: 5vw;
+    }
+
+    .terminal2 {
+        display: none;
+    }
+
+    .account-section {
+        overflow-x: hidden;
+    }
+
+    .fav-games-section, .challanges-section, .rewards-section, .tournaments-section, .account-section {
+        min-height: 40vw;
+    }
+
+    .games-text-container, .rewards-text-container {
+        margin-top: 8vw;
+        margin-left: 8vw;
+        margin-bottom: 8vw;
+        margin-right: 8vw;
+        gap: 2vw;
+        width: 80%;
+    }
+
+    .account-text-container {
+        margin-top: 8vw;
+        margin-left: 8vw;
+        margin-bottom: 8vw;
+        margin-right: 8vw;
+        gap: 2vw;
+        width: 70%;
+    }
+
+    .games-header, .challanges-header, .rewards-header, .tournaments-header, .account-header {
+        font-size: 7vw;
+    }
+
+    .games-header .ulubione-gry, .challanges-header .header-highlight, .rewards-header .wyplacaj, .tournaments-header .header-highlight,
+    .account-header .jedno-konto 
+    {
+        font-size: 7vw;
+        padding: 0vw 0.5vw;
+    }
+
+    .games-text, .rewards-text {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    .account-text {
+        font-size: 4vw;
+        width: 60%;
+    }
+
+    .challanges-text, .tournaments-text  {
+        font-size: 4vw;
+        width: 100%;
+        margin-right: 8vw;
+    }
+
+    .fav-games-section {
+        overflow-x: hidden;
+    }
+
+    .fav-games-image {
+        width: 115vw;
+        right: -75vw;
+    }
+
+    .challanges-text-container {
+        margin-top: 8vw;
+        margin-right: 8vw;
+        margin-bottom: 8vw;
+        gap: 2vw;
+        width: 55%;
+    }
+
+    .tournaments-text-container {
+        margin-top: 8vw;
+        margin-right: 8vw;
+        margin-bottom: 8vw;
+        gap: 2vw;
+        width: 55%;
+    }
+
+    .challanges-main .desktop {
+        display: none;
+    }    
+
+    .challanges-main .mobile {
+        display: block;
+    }
+    
+
+    .challanges-image {
+        width: 52vw;
+        left: -15vw;
+    }
+
+    .rewards-image {
+        width: 65vw;
+        right: -25vw;
+    }
+
+    .tournaments-image {
+        width: 50vw;
+        left: -20vw;
+    }
+
+    .account-image {
+        width: 88vw;
+        right: -45vw;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+
+    .company-info, .useful-links, .contact {
+        margin: 4vw 8vw;
+    }
+
+    .company-info img {
+        width: 30vw;
+    }
+
+    .company-info span, .useful-links span, .useful-links a, .contact span, .contact a {
+        font-size: 4vw;
+    }
+
+    .contact .contact-btn {
+        max-width: 280px;
+    }
+
+    .info-form-container .info, .terminal-content .logo-container {
+        display: none;
+    }
+
+    .info-form-container {
+        margin: 0;
+    }
+
+    .info-form-container .form {
+        width: 87vw;
+        margin: 0;
+    }
+
+    .big-cta-terminal .terminal-content {
+        padding: 6vw;
+    }
+
+    .info-form-container .form input,  .info-form-container .form button{
+        width: 100%;
+    }
+}
