@@ -420,7 +420,7 @@ input[type="checkbox"] {
     font-size: min(0.6vw, 0.8rem);
     line-height: min(0.6vw, 12.81px);
     letter-spacing: min(0.01vw, 0.2135px);
-    transform: translateX(7%);
+    transform: translateX(20%);
 }
 
 /* style do video */
@@ -524,7 +524,7 @@ input[type="checkbox"] {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.3rem;
+    font-size: 3.5rem;
     font-weight: 500;
     z-index: 1;
 }
@@ -1394,8 +1394,25 @@ input[type="checkbox"] {
 
 /* Media large */
 @media(max-width: 1200px) {
+    .navbar {
+        height: 45px;
+    }
+
+    .navbar .logo {
+        margin-left: 5rem;
+    }
+
+    .navbar ul {
+        margin-right: 1.5rem;
+    }
+
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+
     .left-header {
-        width: 35%;
+        /* width: 40%; */
+        margin-left: 5rem;
     }
     
     .heading-text {
@@ -1413,12 +1430,76 @@ input[type="checkbox"] {
     }
 
     .right-header {
-        width: 35%;
+        /* width: 35%; */
+        margin-right: 5rem;
         gap: 40px;
     }
 
     .terminal1 {
-        width: 80%;
+        width: 100%;
+    }
+
+
+    .terminal-content .begoat-terminal-text {
+        font-size: 6px;
+    }
+
+    .terminal-content .input {
+        width: 225px;
+        border: 2px solid white;
+        padding: 4px 6px;
+        font-size: 0.8rem;
+    }
+
+    .terminal1 .terminal-content, .terminal2 .terminal-content {
+        gap: 10px;
+        padding: 10px 20px;
+        padding-bottom: 20px;
+    }
+
+    .terminal-content .regular-terminal-text {
+        font-size: 8px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .agreement-container {
+        gap: 10px;
+    }
+
+    .agreement-text {
+        font-size: 8px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .checkboxOverride {
+        width: 10px;
+    }
+    
+    .checkboxOverride label {
+        border: 2px solid #ffffff;
+        height: 8px;
+        width: 8px;
+    }
+      
+    .checkboxOverride label:after {
+        border: 2px solid #05F4F9;
+        border-top: none;
+        border-right: none;
+        height: 30%;
+        width: 65%;
+        left: 6.3%;
+        top: 15%;
+        opacity: 0;
+    }
+      
+    .terminal-content .button {
+        width: 225px;
+        border: 2px solid #05F4F9;
+        border-style: none none solid none;
+        padding: 4px 6px;
+        font-size: 0.8rem;
     }
 
     .logo-animation-container {
@@ -1434,19 +1515,196 @@ input[type="checkbox"] {
         width: 180px;
     }
 
+    .tile-text {
+        font-size: 1.3rem;
+        top: 230px;
+    }
+
+    .blue-stripe {
+        width: 6.45px;
+    }
+
+    .purple-stripe {
+        width: 6.45px;
+    }
+
     .logo-container {
         display: none;
     }
 
+    /* About */
+    .logo-sygnet {
+        width: 72px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1.5rem;
+    }
+
+    .terminal2 {
+        top: -360px;
+    }
+
+    .about-container {
+        margin-top: 110px;
+    }
+
+    .gaming-essence-container {
+        margin-top: 450px;
+        padding-bottom: 120px;
+    }
+
+    /* Fav games */
+    .fav-games-section {
+        min-height: 525px;
+    }
+
+    .games-text-container {
+        margin-top: 5rem;
+        margin-left: 5rem;
+        margin-bottom: 5rem;
+        gap: 43px;
+    }
+
+    .games-header {
+        font-size: 2.5rem;
+    }
+
+    .games-text {
+        font-size: 1.5rem;
+    }
+
+    .fav-games-image {
+        transform: scaleX(-1);
+        width: 561px;
+    }
+
+    /* Challanges */
+    .challanges-section {
+        min-height: 525px;
+    }
+
+    .challanges-text-container {
+        margin-top: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+        gap: 43px;
+    }
+
+    .challanges-header {
+        font-size: 2.5rem;
+    }
+
+    .challanges-text {
+        font-size: 1.5rem;
+    }
+
+    .challanges-img-container {
+        width: 600px;
+    }
+
+    .challanges-image {
+        width: 490px;
+        right: 50px;
+    }
+
+    /* Rewards */
+    .rewards-section {
+        min-height: 525px;
+    }
+
+    .rewards-text-container {
+        margin-top: 5rem;
+        margin-left: 5rem;
+        margin-bottom: 5rem;
+        gap: 43px;
+    }
+
+    .rewards-header {
+        font-size: 2.5rem;
+    }
+
+    .rewards-text {
+        font-size: 1.5rem;
+    }
+
+    .rewards-image {
+        width: 650px;
+        left: 50px;
+    }
+
+    /* Tournaments */
+    .tournaments-section {
+        min-height: 525px;
+    }
+
+    .tournaments-text-container {
+        margin-top: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+        gap: 43px;
+    }
+
+    .tournaments-header {
+        font-size: 2.5rem;
+    }
+
+    .tournaments-text {
+        font-size: 1.5rem;
+    }
+
+    .tournaments-image {
+        width: 280px;
+        right: 80px;
+    }
+
+    /* Account */
+    .account-section {
+        min-height: 525px;
+    }
+
+    .account-text-container {
+        margin-top: 5rem;
+        margin-left: 5rem;
+        margin-bottom: 5rem;
+        gap: 43px;
+    }
+
+    .account-header {
+        font-size: 2.5rem;
+    }
+
+    .account-text {
+        font-size: 1.5rem;
+    }
+
+    .account-image {
+        width: 500px;
+    }
+
+    /* Big cta */
     .big-cta-terminal .terminal-content {
         justify-content: unset;
     }
 
+    .big-cta-terminal .agreement-text {
+        font-size: 0.7rem;
+    }
+
     .info-form-container {
-        margin-right: 7rem;
+        margin: 0 5rem;
         width: 100%;
     }
     
+    /* Faq */
+    .faq-main {
+        margin: 0 5rem;
+    }
+
     .faq-row {
         flex-direction: column;
         gap: 40px;
@@ -1454,6 +1712,15 @@ input[type="checkbox"] {
 
     .faq-question {
         width: 100%;
+    }
+
+    /* Footer */
+    .company-info {
+        margin-left: 5rem;
+    }
+
+    .contact {
+        margin-right: 5rem;
     }
 }
 
