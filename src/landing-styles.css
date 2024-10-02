@@ -1368,8 +1368,6 @@ input[type="checkbox"] {
     border: 3px solid #05F4F9;
     border-left: none;
     border-right: none;
-
-    /* tło działa git, ale psure performance ?? może sie polepszy jak będzie import z png */
     background-image: url('/public/backgrounds/footer-bg.png');
     background-size: auto 800px;
     background-repeat: no-repeat;
