@@ -190,6 +190,11 @@
 
             <div class="video-container">
                 <img class="video-frame" src="/public/ramka-video.svg">
+                <video class="video-content" src="/public/videos/placeholder-video.mp4"></video>
+                <div class="video-overlay">
+                    <div class="video-label">/Zobacz co dla Ciebie tworzymy/:</div>
+                    <img class="play-btn" src="/public/icons/play.svg" alt="Play">
+                </div>
             </div>
         </div>
     </div>
@@ -238,8 +243,8 @@
                     </span>
                     <div class="agreement-container">
                         <div class="checkboxOverride">
-                            <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                            <label for="checkboxInputOverride"></label>
+                            <input type="checkbox" name="" id="checkboxInputOverride2" value="1">
+                            <label for="checkboxInputOverride2"></label>
                         </div>
                         <span class="agreement-text">
                             Oświadczam, że wyrażam zgodę na otrzymywanie od BEGOAT informacji o nowościach za
@@ -403,8 +408,8 @@
                         <input class="input big-cta-email-input" placeholder="EMAIL:">
                         <div class="agreement-container">
                             <div class="checkboxOverride">
-                                <input type="checkbox" name="" id="checkboxInputOverride" value="1">
-                                <label for="checkboxInputOverride"></label>
+                                <input type="checkbox" name="" id="checkboxInputOverride3" value="1">
+                                <label for="checkboxInputOverride3"></label>
                             </div>
                             <span class="agreement-text">
                                 Oświadczam, że wyrażam zgodę na otrzymywanie od BEGOAT informacji o nowościach za
@@ -678,6 +683,40 @@
                 menuIcon.src = "/public/icons/3dots.svg";
             }
         });   
+    </script>
+
+    <!-- Customoe video controls -->
+    <script>
+        const video = document.querySelector('.video-content');
+        const overlay = document.querySelector('.video-overlay');
+        const playButton = document.querySelector('.play-btn');
+
+        // Odtwarzanie wideo po kliknięciu przycisku play
+        playButton.addEventListener('click', () => {
+            video.play();
+            overlay.classList.add('hidden');
+        });
+
+        // Pauzowanie lub odtwarzanie wideo po kliknięciu na wideo
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+                overlay.classList.add('hidden');
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        });
+
+        // Ukrywanie overlay po rozpoczęciu odtwarzania
+        video.addEventListener('play', () => {
+            overlay.classList.add('hidden');
+        });
+
+        // Pojawianie się overlay po pauzowaniu
+        video.addEventListener('pause', () => {
+            overlay.classList.remove('hidden');
+        });
     </script>
 
     <!-- glitchowanie ascii -->

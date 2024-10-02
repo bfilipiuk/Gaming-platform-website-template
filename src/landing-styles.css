@@ -92,7 +92,7 @@ html {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 2100px;
+    max-width: 1900px;
 }
 
 .header-columns-container {
@@ -134,8 +134,10 @@ html {
 
 .autotype-container {
     position: relative;
-    height: 80px;
+    height: 5rem;
     z-index: 0;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .autotype-bg {
@@ -351,12 +353,14 @@ input[type="checkbox"] {
   
 .checkboxOverride label:after {
     color: #05F4F9;
-    border-style: none none solid solid;
+    border: 3px solid #05F4F9;
+    border-top: none;
+    border-right: none;
     content: "";
     height: 30%;
     width: 60%;
-    left: 10%;
-    top: 20%;
+    left: 12%;
+    top: 13%;
     opacity: 0;
     position: absolute;
     -ms-transform:rotate(-45deg); /* IE 9 */
@@ -414,7 +418,7 @@ input[type="checkbox"] {
     font-size: min(0.6vw, 0.8rem);
     line-height: min(0.6vw, 12.81px);
     letter-spacing: min(0.01vw, 0.2135px);
-    transform: translateX(20%);
+    transform: translateX(23%);
 }
 
 /* style do video */
@@ -423,10 +427,65 @@ input[type="checkbox"] {
     justify-content: center;
     margin-top: 100px;
     width: 70%;
+    position: relative;
+    display: inline-block;
 }
 
 .video-frame {
+    display: block;
     width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.video-content {
+    z-index: 1;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(2.5%, 4.5%);
+    width: 95%;
+    height: auto;
+}
+
+.video-overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(2.5%, 2.5%);
+    width: 95%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: min(2vw, 38px);
+}
+
+.video-label {
+    margin-bottom: min(2vw, 38px);
+}
+
+.play-btn {
+    width: min(8vw, 152px);
+    height: auto;
+    cursor: pointer;
+    transition: scale 0.3s ease-in-out;
+    border-radius: 100%;
+    box-shadow: 0 0 20px 3px #05F4F9;
+}
+
+.play-btn:hover {
+    scale: 1.05;
+}
+
+.hidden {
+    display: none;
 }
 /* Koniec styli do headera */
 
@@ -1156,7 +1215,7 @@ input[type="checkbox"] {
 
 .big-cta-terminal .info span {
     font-size: 0.8rem;
-    flex-shrink:initial;
+    flex-shrink: initial;
 }
 
 .info-form-container {
@@ -1190,7 +1249,6 @@ input[type="checkbox"] {
 }
 
 .info-form-container .form .button {
-    width: 225px;
     color: #000000;
     background-color: rgb(255, 255, 255);
     outline: none;
@@ -1386,6 +1444,55 @@ input[type="checkbox"] {
 }
 /* Koniec footera */
 
+/* Media extra extra large */
+@media(min-width: 1400px) {
+    .terminal-content .begoat-terminal-text {
+        font-size: 0.7rem;
+    }
+
+    .terminal-content .regular-terminal-text {
+        font-size: 0.9rem;
+    }
+
+    .terminal2 {
+        width: 700px;
+        top: -445px;
+    }
+
+    .terminal2 .terminal-content span {
+        font-size: 0.9rem;
+    }
+
+    .agreement-container {
+        gap: 15px;
+    }
+
+    .agreement-text {
+        font-size: 0.9rem;
+    }
+
+    .terminal-content .input {
+        font-size: 1.2rem;
+    }
+
+    .terminal-content .button {
+        font-size: 1.2rem;
+    }
+
+    .info-form-container .form input {
+        font-size: 1.2rem;
+    }
+    
+    .info-form-container .form .button {
+        font-size: 1.2rem;
+    }
+
+    .big-cta-terminal .info span {
+        font-size: 0.9rem;
+        flex-shrink: initial;
+    }
+}
+
 /* Media large */
 @media(max-width: 1200px) {
     .navbar {
@@ -1415,6 +1522,11 @@ input[type="checkbox"] {
 
     .heading-text span {
         font-size: 4rem;
+    }
+
+    .autotype-container {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
     }
 
     .autotype-bg {
@@ -1730,7 +1842,9 @@ input[type="checkbox"] {
     }
 
     .autotype-container {
-        height: 4rem;
+        height: 3.8rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
 
     .autotype-line {
@@ -1932,12 +2046,14 @@ input[type="checkbox"] {
 
     .autotype-container {
         height: 11vw;
+        margin-top: 0.8vw;
+        margin-bottom: 0.8vw;
     }
 
     .autotype-bg {
-        height: 9.5vw;
+        height: 9vw;
         width: 50vw;
-        top: 0;
+        top: 0.5vw;
     }
 
     .autotype-line {
