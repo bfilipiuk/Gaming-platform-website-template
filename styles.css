@@ -622,8 +622,9 @@ input[type="checkbox"] {
     z-index: 2;
 }
 
-.terminal2 .terminal-content span {
+.terminal2 .terminal-content p {
     font-size: 0.7rem;
+    margin: 0;
 }
 
 .gaming-essence-container .mobile {
@@ -644,6 +645,7 @@ input[type="checkbox"] {
     font-size: 3.5vw;
     font-size: min(3.5vw, 74px);
     font-weight: 500;
+    margin: 0;
 }
 
 .gaming-essence-container .essence-text-container .esencja-gamingu {
@@ -674,11 +676,13 @@ input[type="checkbox"] {
     font-size: min(2.1vw, 44px);
     font-weight: 600;
     color: #05F4F9;
+    margin: 0;
 }
 
 .essence-text-container .text-columns-container .column .text {
     font-size: min(1.75vw, 36.5px);
     font-weight: 500;
+    margin: 0;
 }
 
 .gaming-essence-container .sofa-characters {
@@ -749,6 +753,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 0;
 }
 
 .games-header .ulubione-gry {
@@ -760,6 +765,7 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 500;
     color: #000000;
+    margin: 0;
 }
 
 .games-img-container {
@@ -838,6 +844,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 0;
 }
 
 .challanges-header .header-highlight {
@@ -850,6 +857,7 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 500;
     color: white;
+    margin: 0;
 }
 
 .challanges-img-container {
@@ -932,6 +940,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 0;
 }
 
 .rewards-header .wyplacaj {
@@ -943,6 +952,7 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 500;
     color: #ffffff;
+    margin: 0;
 }
 
 .rewards-img-container {
@@ -1022,6 +1032,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 0;
 }
 
 .tournaments-header .header-highlight {
@@ -1033,6 +1044,7 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 500;
     color: rgb(0, 0, 0);
+    margin: 0;
 }
 
 .tournaments-img-container {
@@ -1109,6 +1121,7 @@ input[type="checkbox"] {
     color: white;
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 0;
 }
 
 .account-header .jedno-konto {
@@ -1120,6 +1133,7 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-weight: 500;
     color: #ffffff;
+    margin: 0;
 }
 
 .account-text .be, .account-text .goat {
@@ -1355,9 +1369,11 @@ input[type="checkbox"] {
 .question-title {
     color: #05F4F9;
     font-weight: 600;
+    margin-bottom: 0 ;
 }
 
 .question-answer {
+    margin: 0;
     color: white;
 }
 
@@ -1403,7 +1419,8 @@ input[type="checkbox"] {
     margin-bottom: 1rem;
 }
 
-.company-info span {
+.company-info p {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
